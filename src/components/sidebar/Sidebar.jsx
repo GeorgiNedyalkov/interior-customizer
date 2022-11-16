@@ -1,6 +1,7 @@
 import "./Sidebar.css"
 import Button from "../button/Button"
 import Feature from "../feature/Feature"
+import { featureList } from "../../data/featuresList"
 
 const Sidebar = () => {
   return (
@@ -10,12 +11,12 @@ const Sidebar = () => {
       <h1 className="title">Do you need parking or storage?</h1>
 
       <div className="home-types">
-        <Feature title="One bedroom" price="$857,000" />
-        <Feature title="Two bedroom" price="$1,000,000" />
-        <Feature title="Three bedroom" price="$1,200,000" />
+        {featureList.map(({ title, price, icon }) => {
+          return <Feature title={title} price={price} icon={icon} />
+        })}
       </div>
 
-      <Button>See available homes</Button>
+      <Button>Continue</Button>
     </div>
   )
 }
@@ -27,7 +28,7 @@ const SidebarMenu = () => {
         <li>Size</li>
         <li>Designer</li>
         <li>Features</li>
-        <li className="active">Add-Ons</li>
+        <li>Add-Ons</li>
       </ul>
     </div>
   )
