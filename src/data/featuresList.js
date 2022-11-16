@@ -9,15 +9,11 @@ export const featureList = [
   {
     title: "Two Bedroom",
     price: 1_000_000,
-    icon: [<MdSingleBed className="icon" />, <MdSingleBed className="icon" />],
+    icon: [<MdSingleBed className="icon" />],
   },
   {
     title: "Three Bedroom",
     price: 1_200_000,
-    icon: [
-      <MdSingleBed className="icon" />,
-      <MdSingleBed className="icon" />,
-      <MdSingleBed className="icon" />,
-    ],
+    icon: [<MdSingleBed className="icon" />],
   },
 ]
