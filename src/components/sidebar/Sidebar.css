@@ -23,7 +23,9 @@
 }
 
 .title {
-    padding: 50px 40px;
+    padding: 0px 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
     font-size: 3rem;
     font-weight: lighter;
     color: rgb(61, 61, 61);
@@ -31,11 +33,16 @@
 
 .active {
     border-bottom: 2px solid black;
-    
 }
 
-.home-types {
+.features {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.description {
+    padding: 0px 40px;
+    padding-bottom: 50px;
 }
