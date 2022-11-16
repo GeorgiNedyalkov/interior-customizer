@@ -12,7 +12,13 @@ const Sidebar = () => {
 
       <div className="home-types">
         {featureList.map(({ title, price, icon }) => {
-          return <Feature title={title} price={price} icon={icon} />
+          return (
+            <Feature
+              title={title}
+              price={`$${price.toLocaleString()}`}
+              icon={icon}
+            />
+          )
         })}
       </div>
 
