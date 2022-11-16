@@ -1,0 +1,8 @@
+.sidebar {
+    background-color: lightgray;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+}
