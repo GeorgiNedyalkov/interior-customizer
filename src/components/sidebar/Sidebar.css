@@ -1,6 +1,10 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 25vw;
+    padding: 0px;
+    background-color: #fefefe;
 }
 
 .categories {
@@ -9,7 +13,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 60px;
     color: rgba(0, 0, 0, 0.9);
     font-size: 1.2rem;
+}
+
+.categories > li {
+    cursor: pointer;
+}
+
+.title {
+    padding: 50px 40px;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: rgb(61, 61, 61);
+}
+
+.active {
+    border-bottom: 2px solid black;
+    
+}
+
+.home-types {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
