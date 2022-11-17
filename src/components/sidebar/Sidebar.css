@@ -18,8 +18,14 @@
     font-size: 1.2rem;
 }
 
-.categories > li {
+.categories > a {
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.categories > a:hover {
+    text-decoration: underline;
 }
 
 .title {

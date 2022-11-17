@@ -1,23 +1,23 @@
 import "./App.css"
-import Navbar from "./components/navbar/Navbar"
-import Sidebar from "./components/sidebar/Sidebar"
+import Size from "./pages/size/Size"
+import Designer from "./pages/designer/Designer"
+import Features from "./pages/features/Features"
+import AddOns from "./pages/add-ons/AddOns"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <div className="home">
-        <div className="displayer">
-          <img
-            className="display-img"
-            src="https://images.nabr.com/display?path=ConfigOptions/SOFA1/design_studio_default_carousel_image.webp&h=0&w=1200&op=resize"
-            alt=""
-          />
-        </div>
-        <div className="sidebar">
-          <Sidebar />
-        </div>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Size />} />
+            <Route path="/designer" element={<Designer />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/addons" element={<AddOns />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

@@ -8,3 +8,11 @@
     background-color: #efefef;
 }
 
+.nav-title {
+    color: rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+}
+
+.nav-title:hover {
+    color: rgb(6, 201, 6)
+}

@@ -9,11 +9,13 @@ import {
   featuresList,
 } from "../../data/featuresList"
 import { AiOutlineDown, AiOutlineHeart } from "react-icons/ai"
+import { Link } from "react-router-dom"
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <SidebarMenu />
+      {/* <HomeList /> */}
       <FeatureList />
     </div>
   )
@@ -133,10 +135,18 @@ const SidebarMenu = () => {
   return (
     <div className="sidebar-menu">
       <ul className="categories">
-        <li>Size</li>
-        <li>Designer</li>
-        <li>Features</li>
-        <li>Add-Ons</li>
+        <Link to="/">
+          <li>Size</li>
+        </Link>
+        <Link to="/designer">
+          <li>Designer</li>
+        </Link>
+        <Link to="/features">
+          <li>Features</li>
+        </Link>
+        <Link to="/addons">
+          <li>Add-Ons</li>
+        </Link>
       </ul>
     </div>
   )
