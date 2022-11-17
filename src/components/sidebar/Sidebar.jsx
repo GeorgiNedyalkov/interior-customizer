@@ -1,7 +1,14 @@
 import "./Sidebar.css"
+import { useState } from "react"
 import Button from "../button/Button"
 import Feature from "../feature/Feature"
-import { homeList, addOns, designerList } from "../../data/featuresList"
+import {
+  homeList,
+  addOns,
+  designerList,
+  featuresList,
+} from "../../data/featuresList"
+import { AiOutlineDown, AiOutlineHeart } from "react-icons/ai"
 
 const Sidebar = () => {
   return (
@@ -13,9 +20,44 @@ const Sidebar = () => {
 }
 
 const FeatureList = () => {
+  const [showFeature, setShowFeature] = useState(false)
+
   return (
     <div className="features">
-      <Feature title="" />
+      <h1 className="title">What are your preferred features?</h1>
+      <p className="description">
+        After you’ve made a reservation, one of our Design Advisors will be in
+        touch to help you finalize your selections.
+      </p>
+
+      {featuresList.map((feature) => (
+        <>
+          <div
+            className="feature-section"
+            onClick={() => setShowFeature(!showFeature)}
+          >
+            <div className="fc-top">
+              <div className="fc-left">
+                {feature.icon}
+                <h2 className="feature-title">{feature.title}</h2>
+              </div>
+              <AiOutlineDown />
+            </div>
+            <div className="fc-bottom">
+              {feature.features.map((feature) => (
+                <div className="sub-feature">
+                  <h2 className="sb-title">
+                    {feature.title}
+                    <AiOutlineHeart className="heart-icon" />
+                  </h2>
+                  <p>{`$${feature.price.toLocaleString()}`}</p>
+                  <p style={{ color: "green" }}>Details</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      ))}
     </div>
   )
 }
