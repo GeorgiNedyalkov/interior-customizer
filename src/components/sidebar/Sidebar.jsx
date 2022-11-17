@@ -15,7 +15,7 @@ const Sidebar = () => {
 const FeatureList = () => {
   return (
     <div className="features">
-      <Feature />
+      <Feature title="" />
     </div>
   )
 }
