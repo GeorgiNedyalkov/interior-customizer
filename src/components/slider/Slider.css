@@ -1,0 +1,61 @@
+.slider {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.slider-caption {
+    padding: 24px;
+    background-color: #FAF8F5;
+}
+
+/* Slide functionality */
+
+figure {
+    position: absolute;
+    width: 70vw; 
+    height: 100%;
+    opacity: 0;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 42vh;
+    background-color: rgb(244, 244, 244);
+    color: rgb(85, 85, 85);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    border: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+
+.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.lastSlide {
+   transform: translateX(-100%);
+}
+
+.nextSlide {
+    transform: translateX(100%);
+}
