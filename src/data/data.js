@@ -9,6 +9,37 @@ import {
   FcPodiumWithSpeaker,
 } from "react-icons/fc";
 
+export const bigDesign = [
+  {
+    id: 1,
+    image:
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/big_design_01.jpg&h=0&w=1200&op=resize",
+    caption:
+      "BIG’s design brings the firm’s sought-after architectural sensibility to Nabr homes. The package will be available at an additional cost of approximately 10% of the price of your Nabr home.",
+  },
+  {
+    id: 2,
+    image:
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/big_design_02.jpg&h=0&w=1200&op=resize",
+    caption:
+      "BIG offers the best of Scandinavian design, juxtaposing natural woods with metal and glass.",
+  },
+  {
+    id: 3,
+    image:
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/big_design_03.jpg&h=0&w=1200&op=resize",
+    caption:
+      "The bedroom features elegantly simple details, like a custom integrated desk for a work from home environment that’s at once luxurious and pragmatic.",
+  },
+  {
+    id: 4,
+    image:
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/palette.jpg&h=0&w=1200&op=resize",
+    caption:
+      "BIG emphasizes natural materials of the highest quality: wide oak floor planks, a light finish on exposed cross laminated timber ceilings, and stone in the bathrooms.",
+  },
+];
+
 export const homeList = [
   {
     title: "One Bedroom",
