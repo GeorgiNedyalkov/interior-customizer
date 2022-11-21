@@ -36,13 +36,17 @@ const Slider = () => {
 
         return (
           <figure key={id} className={position}>
-            <button className="prev" onClick={() => setIndex(index - 1)}>
-              <FiChevronLeft />
-            </button>
+            {index > 0 && (
+              <button className="prev" onClick={() => setIndex(index - 1)}>
+                <FiChevronLeft />
+              </button>
+            )}
             <img src={image} alt="" />
-            <button className="next" onClick={() => setIndex(index + 1)}>
-              <FiChevronRight />
-            </button>
+            {index !== design.length - 1 && (
+              <button className="next" onClick={() => setIndex(index + 1)}>
+                <FiChevronRight />
+              </button>
+            )}
             <figcaption className="slider-caption">
               {caption}
               <div className="dot-container">
