@@ -1,6 +1,7 @@
-import Sidebar from "../../components/sidebar/Sidebar";
+import SidebarMenu from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Displayer from "../../components/displayer/Displayer";
+import HomeList from "../../components/homeList/HomeList";
 
 const Size = () => {
   return (
@@ -9,7 +10,8 @@ const Size = () => {
       <div className="home">
         <Displayer />
         <div className="sidebar">
-          <Sidebar />
+          <SidebarMenu />
+          <HomeList />
         </div>
       </div>
     </div>
