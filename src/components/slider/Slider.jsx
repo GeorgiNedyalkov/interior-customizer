@@ -43,7 +43,22 @@ const Slider = () => {
             <button className="next" onClick={() => setIndex(index + 1)}>
               <FiChevronRight />
             </button>
-            <figcaption className="slider-caption">{caption}</figcaption>
+            <figcaption className="slider-caption">
+              {caption}
+              <div className="dot-container">
+                {design.map((slide, slideIndex) => {
+                  return (
+                    <div
+                      key={slideIndex}
+                      className="dot"
+                      onClick={() => setIndex(slideIndex)}
+                    >
+                      &#8226;
+                    </div>
+                  );
+                })}
+              </div>
+            </figcaption>
           </figure>
         );
       })}

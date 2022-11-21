@@ -58,3 +58,15 @@ figure {
 .nextSlide {
     transform: translateX(100%);
 }
+
+.dot-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dot {
+    font-size: 3rem;
+    color: lightgray;
+    cursor: pointer;
+}
