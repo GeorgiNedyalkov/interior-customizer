@@ -1,10 +1,10 @@
-import React from "react"
-import { addOns } from "../../data/featuresList"
-import Feature from "../../components/feature/Feature"
-import Button from "../../components/button/Button"
-import Navbar from "../../components/navbar/Navbar"
-import Sidebar from "../../components/sidebar/Sidebar"
-import Displayer from "../../components/displayer/Displayer"
+import React from "react";
+import { addOns } from "../../data/data";
+import Feature from "../../components/feature/Feature";
+import Button from "../../components/button/Button";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Displayer from "../../components/displayer/Displayer";
 
 const AddOns = () => {
   return (
@@ -21,13 +21,13 @@ const AddOns = () => {
                 price={`$${price.toLocaleString()}`}
                 icon={icon}
               />
-            )
+            );
           })}
         </div>
         <Button>See available homes</Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AddOns
+export default AddOns;

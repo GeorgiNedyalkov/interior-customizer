@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import "./Navbar.css"
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
         <h1>Custom Home</h1>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

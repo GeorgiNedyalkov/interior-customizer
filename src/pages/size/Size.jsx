@@ -1,6 +1,6 @@
-import Sidebar from "../../components/sidebar/Sidebar"
-import Navbar from "../../components/navbar/Navbar"
-import Displayer from "../../components/displayer/Displayer"
+import Sidebar from "../../components/sidebar/Sidebar";
+import Navbar from "../../components/navbar/Navbar";
+import Displayer from "../../components/displayer/Displayer";
 
 const Size = () => {
   return (
@@ -13,7 +13,7 @@ const Size = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Size
+export default Size;

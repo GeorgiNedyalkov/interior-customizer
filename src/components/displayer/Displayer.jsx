@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Displayer = () => {
   return (
@@ -9,7 +9,7 @@ const Displayer = () => {
         alt=""
       />
     </div>
-  )
-}
+  );
+};
 
-export default Displayer
+export default Displayer;

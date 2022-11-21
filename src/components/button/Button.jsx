@@ -1,7 +1,7 @@
-import "./Button.css"
+import "./Button.css";
 
 const Button = ({ children }) => {
-  return <button className="btn">{children}</button>
-}
+  return <button className="btn">{children}</button>;
+};
 
-export default Button
+export default Button;

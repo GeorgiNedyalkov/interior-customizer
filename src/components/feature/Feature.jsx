@@ -1,5 +1,5 @@
-import "./Feature.css"
-import { AiOutlineHeart } from "react-icons/ai"
+import "./Feature.css";
+import { AiOutlineHeart } from "react-icons/ai";
 
 const Feature = ({ price, title, icon }) => {
   return (
@@ -15,7 +15,7 @@ const Feature = ({ price, title, icon }) => {
         <AiOutlineHeart className="heart-icon" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Feature
+export default Feature;

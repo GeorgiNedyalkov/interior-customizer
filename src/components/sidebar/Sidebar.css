@@ -1,96 +1,95 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 25vw;
-    padding: 0px;
-    background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 25vw;
+  padding: 0px;
+  background-color: #fefefe;
 }
 
 .categories {
-    height: 100px;
-    border: 1px solid gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 1.2rem;
+  height: 100px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 1.2rem;
 }
 
 .categories > a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .categories > a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .title {
-    padding: 0px 40px;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    font-size: 3rem;
-    font-weight: lighter;
-    color: rgb(61, 61, 61);
+  padding: 0px 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 3rem;
+  font-weight: lighter;
+  color: rgb(61, 61, 61);
 }
 
 .active {
-    border-bottom: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .features {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .description {
-    padding: 0px 40px;
-    padding-bottom: 50px;
+  padding: 0px 40px;
+  padding-bottom: 50px;
 }
 
 .feature-section {
-    background-color: #ffffff;
-    padding: 30px 50px;
-    margin: 0px 50px;
-    border: 1px solid lightgray;
+  background-color: #ffffff;
+  padding: 30px 50px;
+  margin: 0px 50px;
+  border: 1px solid lightgray;
 }
 
 .fc-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .fc-left {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-
 .fc-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .sub-feature {
-    border: 1px solid lightgray;
-    margin: 20px;
-    padding: 20px;
-    width: 250px;
+  border: 1px solid lightgray;
+  margin: 20px;
+  padding: 20px;
+  width: 250px;
 }
 
 .sb-title {
-    color: rgb(136, 136, 136);
-    font-size: 1.3rem;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  color: rgb(136, 136, 136);
+  font-size: 1.3rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

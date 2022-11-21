@@ -1,13 +1,13 @@
-import { MdSingleBed } from "react-icons/md"
-import { FaCarSide } from "react-icons/fa"
-import { TbBuildingWarehouse } from "react-icons/tb"
+import { MdSingleBed } from "react-icons/md";
+import { FaCarSide } from "react-icons/fa";
+import { TbBuildingWarehouse } from "react-icons/tb";
 import {
   FcLandscape,
   FcEditImage,
   FcCloseUpMode,
   FcFilmReel,
   FcPodiumWithSpeaker,
-} from "react-icons/fc"
+} from "react-icons/fc";
 
 export const homeList = [
   {
@@ -25,7 +25,7 @@ export const homeList = [
     price: 1_200_000,
     icon: [<MdSingleBed className="icon" />],
   },
-]
+];
 
 export const addOns = [
   {
@@ -38,7 +38,7 @@ export const addOns = [
     price: 2_500,
     icon: [<TbBuildingWarehouse className="icon" />],
   },
-]
+];
 
 export const designerList = [
   {
@@ -59,7 +59,7 @@ export const designerList = [
     img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/nabr_logo.svg&h=0&w=720&op=resize",
     comingsoon: true,
   },
-]
+];
 
 export const featuresList = [
   {
@@ -167,4 +167,4 @@ export const featuresList = [
       },
     ],
   },
-]
+];

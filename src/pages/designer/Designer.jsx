@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
 const Designer = () => {
-  return <div>Designer</div>
-}
+  return <div>Designer</div>;
+};
 
-export default Designer
+export default Designer;

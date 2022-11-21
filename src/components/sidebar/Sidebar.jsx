@@ -1,28 +1,22 @@
-import "./Sidebar.css"
-import { useState } from "react"
-import Button from "../button/Button"
-import Feature from "../feature/Feature"
-import {
-  homeList,
-  addOns,
-  designerList,
-  featuresList,
-} from "../../data/featuresList"
-import { AiOutlineDown, AiOutlineHeart } from "react-icons/ai"
-import { Link } from "react-router-dom"
+import "./Sidebar.css";
+import { useState } from "react";
+import Button from "../button/Button";
+import Feature from "../feature/Feature";
+import { homeList, addOns, designerList, featuresList } from "../../data/data";
+import { AiOutlineDown, AiOutlineHeart } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <SidebarMenu />
-      {/* <HomeList /> */}
-      <FeatureList />
+      <HomeList />
     </div>
-  )
-}
+  );
+};
 
 const FeatureList = () => {
-  const [showFeature, setShowFeature] = useState(false)
+  const [showFeature, setShowFeature] = useState(false);
 
   return (
     <div className="features">
@@ -61,8 +55,8 @@ const FeatureList = () => {
         </>
       ))}
     </div>
-  )
-}
+  );
+};
 
 const DesignerList = () => {
   return (
@@ -82,13 +76,13 @@ const DesignerList = () => {
               price={designer.type}
               comingSoon={false}
             />
-          )
+          );
         })}
       </div>
       <Button>Continue</Button>
     </>
-  )
-}
+  );
+};
 
 const AddOnList = () => {
   return (
@@ -103,13 +97,13 @@ const AddOnList = () => {
               price={`$${price.toLocaleString()}`}
               icon={icon}
             />
-          )
+          );
         })}
       </div>
       <Button>See available homes</Button>
     </>
-  )
-}
+  );
+};
 
 const HomeList = () => {
   return (
@@ -123,13 +117,13 @@ const HomeList = () => {
               price={`$${price.toLocaleString()}`}
               icon={icon}
             />
-          )
+          );
         })}
       </div>
       <Button>Continue</Button>
     </>
-  )
-}
+  );
+};
 
 const SidebarMenu = () => {
   return (
@@ -149,7 +143,7 @@ const SidebarMenu = () => {
         </Link>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
