@@ -1,25 +1,22 @@
-.slider {
+figure {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s linear;
+    width: 75vw;
     height: 100%;
-    width: 100%;
 }
 
 img {
-    width: 100%;
-    height: 80vh;
+    display: block;
     object-fit: cover;
+    height: 80%;
+    width: 100%;
 }
 
 .slider-caption {
     padding: 24px;
     background-color: #FAF8F5;
-}
-
-figure {
-    position: absolute;
-    width: 70vw; 
-    height: 100%;
-    opacity: 0;
-    transition: all 0.3s linear;
+    border: 1px solid black;
 }
 
 .prev,

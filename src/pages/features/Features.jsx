@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
-import Displayer from "../../components/displayer/Displayer";
+import Slider from "../../components/slider/Slider";
 import SidebarMenu from "../../components/sidebar/SidebarMenu";
 import FeatureList from "../../components/featureList/FeatureList";
 
@@ -8,8 +8,8 @@ const Features = () => {
   return (
     <div className="features">
       <Navbar />
-      <div className="home">
-        <Displayer />
+      <div className="main">
+        <Slider />
         <div className="sidebar">
           <SidebarMenu />
           <FeatureList />
