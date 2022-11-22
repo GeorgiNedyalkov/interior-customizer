@@ -4,7 +4,7 @@ A website that helps home buyers customise their dream home.
 
 ## Todo
 
-- [] Bug fix: Fix the layout of the sidebar and slider.
+- [x] Bug fix: Fix the layout of the sidebar and slider.
 - [] Bug fix: Fix the features page.
 - [] Add the rest of the slider assets to the data.
 - [] Add the badge to the slider.

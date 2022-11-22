@@ -6,7 +6,7 @@ import FeatureList from "../../components/featureList/FeatureList";
 
 const Features = () => {
   return (
-    <div className="features">
+    <div>
       <Navbar />
       <div className="main">
         <Slider />

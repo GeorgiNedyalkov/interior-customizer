@@ -1,0 +1,51 @@
+.features {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  padding: 0px 40px;
+  padding-bottom: 50px;
+}
+
+.feature-section {
+  background-color: #ffffff;
+  padding: 30px 50px;
+  margin: 0px 50px;
+  border: 1px solid lightgray;
+}
+
+.fc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fc-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.fc-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sub-feature {
+  border: 1px solid lightgray;
+  margin: 20px;
+  padding: 20px;
+  width: 250px;
+}
+
+.sb-title {
+  color: rgb(136, 136, 136);
+  font-size: 1.3rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

@@ -3,7 +3,7 @@ import SidebarMenu from "./SidebarMenu";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div>
       <SidebarMenu />
     </div>
   );

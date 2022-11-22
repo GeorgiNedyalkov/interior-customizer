@@ -12,7 +12,6 @@ const FeatureList = () => {
         After you’ve made a reservation, one of our Design Advisors will be in
         touch to help you finalize your selections.
       </p>
-
       {featuresList.map((feature) => (
         <>
           <div
@@ -26,18 +25,21 @@ const FeatureList = () => {
               </div>
               <AiOutlineDown />
             </div>
-            <div className="fc-bottom">
-              {feature.features.map((feature) => (
-                <div className="sub-feature">
-                  <h2 className="sb-title">
-                    {feature.title}
-                    <AiOutlineHeart className="heart-icon" />
-                  </h2>
-                  <p>{`$${feature.price.toLocaleString()}`}</p>
-                  <p style={{ color: "green" }}>Details</p>
-                </div>
-              ))}
-            </div>
+
+            {showFeature && (
+              <div className="fc-bottom">
+                {feature.features.map((feature) => (
+                  <div className="sub-feature">
+                    <h2 className="sb-title">
+                      {feature.title}
+                      <AiOutlineHeart className="heart-icon" />
+                    </h2>
+                    <p>{`$${feature.price.toLocaleString()}`}</p>
+                    <p style={{ color: "green" }}>Details</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </>
       ))}
