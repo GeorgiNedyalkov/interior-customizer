@@ -4,7 +4,6 @@ import { featuresList } from "../../data/data";
 
 const FeatureList = () => {
   const [showFeature, setShowFeature] = useState(false);
-
   return (
     <div className="features">
       <h1 className="title">What are your preferred features?</h1>
@@ -16,6 +15,7 @@ const FeatureList = () => {
         <>
           <div
             className="feature-section"
+            key={feature.id}
             onClick={() => setShowFeature(!showFeature)}
           >
             <div className="fc-top">

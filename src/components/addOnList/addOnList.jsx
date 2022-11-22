@@ -1,6 +1,6 @@
-import { addOns } from "../../data/data";
 import Button from "../button/Button";
 import Feature from "../feature/Feature";
+import { addOns } from "../../data/data";
 
 const AddOnList = () => {
   return (

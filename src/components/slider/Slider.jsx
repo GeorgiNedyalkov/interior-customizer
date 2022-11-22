@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import "./Slider.css";
-import { bigDesign } from "../../data/data";
+// import { bigDesign } from "../../data/data";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
-const Slider = () => {
+const Slider = ({ designData }) => {
   const [index, setIndex] = useState(0);
-  const [design, setDesign] = useState(bigDesign);
+  const [design, setDesign] = useState(designData);
 
   useEffect(() => {
-    const lastIndex = bigDesign.length - 1;
+    const lastIndex = design.length - 1;
 
     if (index < 0) {
       setIndex(lastIndex);

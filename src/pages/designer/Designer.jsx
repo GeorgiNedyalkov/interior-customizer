@@ -3,13 +3,14 @@ import Navbar from "../../components/navbar/Navbar";
 import Slider from "../../components/slider/Slider";
 import SidebarMenu from "../../components/sidebar/SidebarMenu";
 import DesignerList from "../../components/designerList/DesignerList";
+import { designerList } from "../../data/data";
 
 const Designer = () => {
   return (
     <div className="designer">
       <Navbar />
       <div className="main">
-        <Slider />
+        <Slider designData={designerList} />
         <div className="sidebar">
           <SidebarMenu />
           <DesignerList />
