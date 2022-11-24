@@ -1,26 +1,23 @@
-/* .slider {
-    height: 100vh;
-} */
-
 figure {
     position: absolute;
     opacity: 0;
     transition: all 0.3s linear;
     width: 75vw;
-    height: 100%;
+    height: 100vh;
 }
 
 img {
     display: block;
     object-fit: cover;
-    height: 80%;
+    height: 77.4%;
     width: 100%;
 }
 
 .slider-caption {
     padding: 24px;
     background-color: #FAF8F5;
-    border: 1px solid black;
+    height: auto;
+    /* border: 1px solid black; */
 }
 
 .prev,

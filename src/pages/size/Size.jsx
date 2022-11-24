@@ -10,7 +10,9 @@ const Size = () => {
     <div className="size">
       <Navbar />
       <div className="main">
-        <Slider designData={bigDesign} />
+        <div className="slider">
+          <Slider />
+        </div>
         <div className="sidebar">
           <SidebarMenu />
           <HomeList />

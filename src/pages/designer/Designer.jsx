@@ -10,7 +10,7 @@ const Designer = () => {
     <div className="designer">
       <Navbar />
       <div className="main">
-        <Slider designData={designerList} />
+        <Slider />
         <div className="sidebar">
           <SidebarMenu />
           <DesignerList />

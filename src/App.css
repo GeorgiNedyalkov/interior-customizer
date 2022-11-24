@@ -8,10 +8,14 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     border: 1px solid black;
     width: 25vw;
     background-color: #fefefe;
     z-index: 999;
 }
 
+.slider {
+    height: 90vh;
+    width: 75vw;
+}

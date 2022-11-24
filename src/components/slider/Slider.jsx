@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import "./Slider.css";
 // import { bigDesign } from "../../data/data";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import { bigDesign } from "../../data/data";
+import { FcCdLogo } from "react-icons/fc";
 
-const Slider = ({ designData }) => {
+const Slider = () => {
   const [index, setIndex] = useState(0);
-  const [design, setDesign] = useState(designData);
+  const [design, setDesign] = useState(bigDesign);
+
+  console.log(design);
 
   useEffect(() => {
     const lastIndex = design.length - 1;
@@ -36,7 +40,7 @@ const Slider = ({ designData }) => {
         }
 
         return (
-          <figure key={id} className={position}>
+          <figure key={id} className={`${position}`}>
             {index > 0 && (
               <button className="prev" onClick={() => setIndex(index - 1)}>
                 <FiChevronLeft />

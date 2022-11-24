@@ -10,7 +10,7 @@ const Features = () => {
     <div>
       <Navbar />
       <div className="main">
-        <Slider designData={featuresList} />
+        <Slider />
         <div className="sidebar">
           <SidebarMenu />
           <FeatureList />

@@ -11,7 +11,7 @@ const AddOns = () => {
     <div className="addons">
       <Navbar />
       <div className="main">
-        <Slider designData={addOns} />
+        <Slider />
         <div className="sidebar">
           <SidebarMenu />
           <AddOnList />
