@@ -4,6 +4,7 @@ import Designer from "./pages/designer/Designer";
 import Features from "./pages/features/Features";
 import AddOns from "./pages/add-ons/AddOns";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/designer" element={<Designer />} />
             <Route path="/features" element={<Features />} />
             <Route path="/addons" element={<AddOns />} />
+            <Route path="/login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

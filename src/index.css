@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg: rgb(245, 243, 243);
+    --text-color: rgb(245, 242, 242);
+}
+
 li {
     list-style: none;
 }
