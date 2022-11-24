@@ -1,26 +1,54 @@
+import "./Login.css";
+
 const Login = () => {
   return (
-    <div className="login">
+    <main className="login">
       <div className="left">
-        {/* LOGO */}
-        <img src="" alt="" />
-        <h1>Your City, Your Home</h1>
+        <a href="#" className="logo">
+          Logo
+        </a>
+        <h1 className="title">
+          Your City,
+          <br /> Your Home
+        </h1>
       </div>
       <div className="right">
-        <h3>Log In</h3>
-        <p>
-          don't have an account? <a href="/singup">Sign up</a>
-        </p>
-        <button>Google</button>
-        <button>Apple</button>
-        <hr />
-        <form action="">
-          <label htmlFor="email">Email</label>
-          <input id="email" type="text" placeholder="john.doe@gmail.com" />
-          <button type="submit">Log In</button>
-        </form>
+        <div className="wrapper">
+          <div className="header">
+            <h3>Log In</h3>
+            <p className="text">
+              Don't have an account?{" "}
+              <a href="/singup" className="text" style={{ fontWeight: "bold" }}>
+                Sign up
+              </a>
+            </p>
+          </div>
+          <div className="singin-btns">
+            <button className="signin-btn">Google</button>
+            <button className="signin-btn">Apple</button>
+          </div>
+          <hr className="line" />
+          <div className="singin-form">
+            <form action="">
+              <label htmlFor="email" className="text">
+                Email
+              </label>
+              <br />
+              <input
+                id="email"
+                type="text"
+                placeholder="john.doe@gmail.com"
+                require
+              />
+              <br />
+              <button className="signin-btn" type="submit">
+                Log In
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 
