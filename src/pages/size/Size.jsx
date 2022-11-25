@@ -2,7 +2,6 @@ import SidebarMenu from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import HomeList from "../../components/homeList/HomeList";
 import Slider from "../../components/slider/Slider";
-import { bigDesign } from "../../data/data";
 import "./Size.css";
 
 const Size = () => {
@@ -10,9 +9,7 @@ const Size = () => {
     <div className="size">
       <Navbar />
       <div className="main">
-        <div className="slider">
-          <Slider />
-        </div>
+        <Slider />
         <div className="sidebar">
           <SidebarMenu />
           <HomeList />

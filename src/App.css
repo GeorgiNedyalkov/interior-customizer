@@ -11,6 +11,8 @@
     height: 90vh;
     border: 1px solid black;
     width: 25vw;
+    min-width: 400px;
+    min-height: 800px;
     background-color: #fefefe;
     z-index: 999;
 }

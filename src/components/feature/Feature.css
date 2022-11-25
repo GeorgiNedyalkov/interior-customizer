@@ -4,7 +4,7 @@
     justify-content: space-between;
     border: 1px solid lightgray;
     border-radius: 5px;
-    margin: 0px 50px;
+    margin: 20px 30px;
     padding: 40px;
     height: 100px;
 }
@@ -21,11 +21,12 @@
 }
 
 .feature-title {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .feature-price {
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
     font-weight: 300;
 }
 
@@ -33,10 +34,12 @@
     font-size: 2.5rem;
 }
 
+
 .heart-icon {
     font-size: 2.5rem;
+
     cursor: pointer;
-    color: rgb(3, 175, 3);
+    color: var(--green-color);
 }
 
 .heart-icon:hover {

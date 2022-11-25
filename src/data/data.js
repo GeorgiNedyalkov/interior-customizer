@@ -151,7 +151,7 @@ export const designerList = [
     comingSoon: false,
   },
   {
-    title: "bjarke ingels group",
+    title: "Bjarke Ingels Group",
     type: ["Premium", "Limited Edition"],
     img: "",
     comingsoon: true,
