@@ -9,9 +9,28 @@
 
 :root {
     --bg: rgb(245, 243, 243);
-    --text-color: rgb(245, 242, 242);
+    /* --text-color: rgb(245, 242, 242); */
+    --text-color: rgb(0, 0, 0, 0.6);
+    --green-color: rgb(3, 175, 3);
 }
 
 li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Classes */
+.title {
+  padding: 40px 40px;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: rgb(61, 61, 61);
+}
+
+.description {
+  padding: 0px 40px;
 }

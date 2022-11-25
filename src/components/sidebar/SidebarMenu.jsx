@@ -1,22 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./SidebarMenu.css";
 
 const SidebarMenu = () => {
+  let activeStyle = {
+    borderBottom: "2px solid black",
+  };
+
   return (
     <div className="sidebar-menu">
       <ul className="categories">
-        <Link to="/">
+        <NavLink
+          to="/"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           <li>Size</li>
-        </Link>
-        <Link to="/designer">
+        </NavLink>
+        <NavLink
+          to="/designer"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           <li>Designer</li>
-        </Link>
-        <Link to="/features">
+        </NavLink>
+        <NavLink
+          to="/features"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           <li>Features</li>
-        </Link>
-        <Link to="/addons">
+        </NavLink>
+        <NavLink
+          to="/addons"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           <li>Add-Ons</li>
-        </Link>
+        </NavLink>
       </ul>
     </div>
   );
