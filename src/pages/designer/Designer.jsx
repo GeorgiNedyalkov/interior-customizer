@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Slider from "../../components/slider/Slider";
-import SidebarMenu from "../../components/sidebar/SidebarMenu";
 import DesignerList from "../../components/designerList/DesignerList";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 const Designer = () => {
   return (
@@ -11,8 +11,9 @@ const Designer = () => {
       <div className="main">
         <Slider />
         <div className="sidebar">
-          <SidebarMenu />
-          <DesignerList />
+          <Sidebar>
+            <DesignerList />
+          </Sidebar>
         </div>
       </div>
     </div>

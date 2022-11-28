@@ -1,8 +1,18 @@
-import { designerList } from "../../data/data";
-import Feature from "../feature/Feature";
+import "./DesignerList.css";
+import { useState } from "react";
+import {
+  designerList,
+  kattyDesign,
+  bigDesign,
+  standardDesign,
+} from "../../data/data";
+
+import { AiOutlineHeart } from "react-icons/ai";
 import Button from "../button/Button";
 
 const DesignerList = () => {
+  const [design, setDesign] = useState(standardDesign);
+
   return (
     <>
       <h1 className="title">Who is your preferred designer?</h1>
@@ -12,17 +22,27 @@ const DesignerList = () => {
         included.
       </p>
 
-      <div className="features">
-        {designerList.map((designer) => {
-          return (
-            <Feature
-              title={designer.title}
-              price={designer.type}
-              comingSoon={false}
-            />
-          );
-        })}
-      </div>
+      {designerList.map((designer) => {
+        const { id, title, img, type } = designer;
+
+        return (
+          <div
+            className="designer-section"
+            key={id}
+            onClick={() => console.log(title)}
+          >
+            <div className="designer-left">
+              <img className="designer-img" src={img} alt={title} />
+              <div className="designer-details">
+                <h2 className="designer-title">{title}</h2>
+                <p className="design-type">{type.toString()}</p>
+              </div>
+            </div>
+            <AiOutlineHeart className="heart-icon" />
+          </div>
+        );
+      })}
+
       <Button>Continue</Button>
     </>
   );

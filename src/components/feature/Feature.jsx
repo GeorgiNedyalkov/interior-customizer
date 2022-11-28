@@ -1,9 +1,9 @@
 import "./Feature.css";
 import { AiOutlineHeart } from "react-icons/ai";
 
-const Feature = ({ id, price, title, icon }) => {
+const Feature = ({ id, price, title, icon, img }) => {
   return (
-    <div className="feature" key={id}>
+    <div className="feature" key={id} onClick={() => console.log(title)}>
       <div className="feature-left">
         <div>{icon}</div>
         <div className="feature-details">

@@ -103,7 +103,7 @@ export const kattyDesign = [
     id: 4,
     images: [
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_tiered.png&h=0&w=1200&op=resize",
-      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_half.png&h=0&w=1200&op=resize",
+      // "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_half.png&h=0&w=1200&op=resize",
     ],
   },
 ];
@@ -145,21 +145,24 @@ export const addOns = [
 
 export const designerList = [
   {
+    id: 1,
     title: "Nabr",
     type: "Standard",
-    img: "",
+    img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/nabr_logo.svg&h=0&w=720&op=resize",
     comingSoon: false,
   },
   {
+    id: 2,
     title: "Bjarke Ingels Group",
     type: ["Premium", "Limited Edition"],
-    img: "",
+    img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/big_logo.svg&h=0&w=720&op=resize",
     comingsoon: true,
   },
   {
+    id: 3,
     title: "Katty Shiebeck Studio",
     type: ["Premium", "Limited Edition"],
-    img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/nabr_logo.svg&h=0&w=720&op=resize",
+    img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/katty/katty_logo.svg&h=0&w=720&op=resize",
     comingsoon: true,
   },
 ];
@@ -174,12 +177,13 @@ export const featuresList = [
       {
         title: "Terrace Landscaping",
         price: 3_000,
-        details:
-          "Elevate your living room with this customizable, floor-to-ceiling feature wall. Adjust shelving to display your TV, art, or books; create a workspace; or add a cocktail bar for entertaining.",
+        details: `Designed to match your terrace’s dimensions and material palette, 
+          these self-watering planters come planted with one of three packages.
+           Choose Lush for a verdant, private terrace experience.`,
       },
       {
-        title: "Terrace Landscaping",
-        price: 3_000,
+        title: "Outdoor Kitchen",
+        price: 10_000,
         details:
           "Make the most of indoor-outdoor living with this moveable outdoor kitchen. A powder-coated aluminum finish makes it durable and sleek.",
       },

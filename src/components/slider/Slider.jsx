@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import "./Slider.css";
 // import { bigDesign } from "../../data/data";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { bigDesign } from "../../data/data";
+import { standardDesign } from "../../data/data";
 
-const Slider = () => {
+const Slider = ({ chosenDesign }) => {
   const [index, setIndex] = useState(0);
-  const [design, setDesign] = useState(bigDesign);
+  const [design, setDesign] = useState(standardDesign);
 
   useEffect(() => {
     const lastIndex = design.length - 1;
@@ -23,7 +23,6 @@ const Slider = () => {
     <div className="slider">
       {design.map((slide, slideIndex) => {
         const { id, image, caption } = slide;
-
         let position = "nextSlide";
         if (slideIndex === index) {
           position = "activeSlide";
@@ -34,7 +33,6 @@ const Slider = () => {
         ) {
           position = "lastSlide";
         }
-
         return (
           <figure key={id} className={`${position}`}>
             {index > 0 && (
@@ -51,7 +49,7 @@ const Slider = () => {
             <figcaption className="slider-caption">
               {caption}
               <div className="dot-container">
-                {design.map((slide, slideIndex) => {
+                {design.map((s, slideIndex) => {
                   return (
                     <div
                       key={slideIndex}
