@@ -10,7 +10,6 @@ const Slider = () => {
 
   useEffect(() => {
     const lastIndex = design.length - 1;
-    console.log(design);
 
     if (index < 0) {
       setIndex(lastIndex);

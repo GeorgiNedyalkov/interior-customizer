@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: var(--nav-size);
     width: 100vw;
     color: rgba(0, 0, 0, 0.6);
     background-color: #efefef;

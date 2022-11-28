@@ -1,6 +1,7 @@
 import Button from "../button/Button";
 import Feature from "../feature/Feature";
 import { homeList } from "../../data/data";
+import Sidebar from "../sidebar/Sidebar";
 
 const HomeList = () => {
   return (

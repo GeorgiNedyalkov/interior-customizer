@@ -12,6 +12,11 @@
     /* --text-color: rgb(245, 242, 242); */
     --text-color: rgb(0, 0, 0, 0.6);
     --green-color: rgb(3, 175, 3);
+    --border: 1px solid lightgray; 
+    --shadow: rgb(24 24 26 / 8%) 8px 8px 16px;
+    --category-color: rgb(66, 66, 66);
+    --nav-size: 60px;
+    --sidebar-size: 25vw;
 }
 
 li {
@@ -25,12 +30,13 @@ a {
 
 /* Classes */
 .title {
-  padding: 40px 40px;
   font-size: 2rem;
   font-weight: lighter;
   color: rgb(61, 61, 61);
+  padding: 20px 20px;
 }
 
 .description {
-  padding: 0px 40px;
+  font-size: 1rem;
+  padding: 10px 20px;
 }

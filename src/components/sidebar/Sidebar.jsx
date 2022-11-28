@@ -1,10 +1,11 @@
 import "./Sidebar.css";
 import SidebarMenu from "./SidebarMenu";
 
-const Sidebar = () => {
+const Sidebar = ({ children }) => {
   return (
     <div>
       <SidebarMenu />
+      <div className="sidebar">{children}</div>
     </div>
   );
 };
