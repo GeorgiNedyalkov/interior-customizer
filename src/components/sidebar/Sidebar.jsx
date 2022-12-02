@@ -3,11 +3,9 @@ import SidebarMenu from "./SidebarMenu";
 
 const Sidebar = ({ children }) => {
   return (
-    <div>
+    <div className="sidebar">
       <SidebarMenu />
-      <div className="sidebar">
-        <div className="sidebar-wrapper">{children}</div>
-      </div>
+      <div className="sidebar-wrapper">{children}</div>
     </div>
   );
 };
