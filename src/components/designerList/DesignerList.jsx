@@ -12,6 +12,7 @@ import Button from "../button/Button";
 
 const DesignerList = () => {
   const [design, setDesign] = useState(standardDesign);
+  const [isSelected, setIsSelected] = useState(false);
 
   return (
     <>
@@ -27,7 +28,7 @@ const DesignerList = () => {
 
         return (
           <div
-            className="designer-section"
+            className={`designer-section ${isSelected && "selected"}`}
             key={id}
             onClick={() => console.log(title)}
           >
