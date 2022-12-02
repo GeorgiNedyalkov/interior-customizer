@@ -1,0 +1,82 @@
+.dashboard {
+    background-color: rgb(250, 248, 245);
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    top: -190px;
+    display: flex;
+    flex: 1 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    width: 80vw;
+    left: 200px;
+}
+
+.hero-greeting {
+    flex-basis: 66.66%;
+    align-items: start;
+}
+
+.img-wrap {
+    width: 100%;
+    height: 400px;
+    flex-basis: 33.33%;
+    min-height: auto;
+    padding-top: 16px;
+    padding-right: 16px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.nabr.com/dashboard/nabr_building_dashboard.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 0;
+}
+
+.bg-image {
+    position: relative;
+    top: -64px;
+    padding: 0px 32px;
+    background-image: url(https://www.nabr.com/classic-2.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-top: 60px;
+    height: 35vh;
+}
+
+
+.hero-title {
+    color: rgb(80, 80, 80);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.hero-heading-text {
+    color: rgb(89, 89, 89);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.hero-text {
+    color: rgb(89, 89, 89);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.spacing {
+    margin: 16px 0px 0px;
+}
