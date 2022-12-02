@@ -95,8 +95,10 @@ input {
 }
 
 .title-login {
-    color: var(--text-color);
-    font-size: 3.5rem;
+    color: var(--text-color-white);
+    line-height: 3rem;
+    font-weight: 500;
+    font-size: 3rem;
 }
 
 h3 {

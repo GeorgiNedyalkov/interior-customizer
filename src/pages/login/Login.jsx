@@ -7,7 +7,7 @@ const Login = () => {
         <a href="#" className="logo">
           Logo
         </a>
-        <h1 className="title">
+        <h1 className="title-login">
           Your City,
           <br /> Your Home
         </h1>
