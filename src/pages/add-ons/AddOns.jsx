@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
-import SidebarMenu from "../../components/sidebar/SidebarMenu";
 import AddOnList from "../../components/addOnList/addOnList";
-import Slider from "../../components/slider/Slider";
+import Sidebar from "../../components/sidebar/Sidebar";
 import { addOns } from "../../data/data";
 
 const AddOns = () => {
@@ -19,8 +18,9 @@ const AddOns = () => {
           />
         </div>
         <div className="sidebar">
-          <SidebarMenu />
-          <AddOnList />
+          <Sidebar>
+            <AddOnList />
+          </Sidebar>
         </div>
       </div>
     </div>

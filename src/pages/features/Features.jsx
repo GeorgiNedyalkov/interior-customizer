@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Slider from "../../components/slider/Slider";
-import SidebarMenu from "../../components/sidebar/SidebarMenu";
+import Sidebar from "../../components/sidebar/Sidebar";
 import FeatureList from "../../components/featureList/FeatureList";
+import "./Features.css";
 
 const Features = () => {
   return (
@@ -11,8 +12,9 @@ const Features = () => {
       <div className="main">
         <Slider />
         <div className="sidebar">
-          <SidebarMenu />
-          <FeatureList />
+          <Sidebar>
+            <FeatureList />
+          </Sidebar>
         </div>
       </div>
     </div>
