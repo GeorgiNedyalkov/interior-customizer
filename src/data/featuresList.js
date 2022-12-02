@@ -10,6 +10,7 @@ export const featuresList = [
   {
     id: 1,
     title: "Outdoor Living",
+    category: "outdoor",
     icon: <FcLandscape className="icon" />,
     features: [
       {
@@ -30,6 +31,7 @@ export const featuresList = [
   {
     id: 2,
     title: "High Design",
+    category: "design",
     icon: <FcEditImage className="icon" />,
     features: [
       {
