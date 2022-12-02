@@ -5,21 +5,6 @@ import Button from "../button/Button";
 import "./FeatureList.css";
 
 const FeatureList = () => {
-  const [showFeature, setShowFeature] = useState({
-    outdoor: false,
-    design: false,
-    enterntainment: false,
-    health: false,
-    luxuries: false,
-  });
-
-  const handleChangeFeature = (category) => {
-    setShowFeature((prevState) => ({
-      ...prevState,
-      [category]: !prevState[category],
-    }));
-  };
-
   return (
     <div className="features">
       <h1 className="title">What are your preferred features?</h1>
@@ -28,51 +13,65 @@ const FeatureList = () => {
         touch to help you finalize your selections.
       </p>
 
-      <div className="features-section">
-        {featuresList.map((feature) => {
-          const { id, icon, title } = feature;
-
-          return (
-            <div
-              className="feature-section"
-              key={id}
-              onClick={handleChangeFeature}
-            >
-              <div className="fc-top">
-                <div className="fc-left">
-                  {icon}
-                  <h2 className="feature-title">{title}</h2>
-                </div>
-                <AiOutlineDown />
-              </div>
-
-              <div className="fc-bottom">
-                {/* SubFeature */}
-
-                {showFeature && (
-                  <div className="sub-feature">
-                    {feature.features.map((feature) => (
-                      <div
-                        className="sub-feature"
-                        onClick={() => console.log(feature.title)}
-                      >
-                        <h2 className="sb-title">
-                          {feature.title}
-                          <AiOutlineHeart className="heart-icon" />
-                        </h2>
-                        <p>{`$${feature.price.toLocaleString()}`}</p>
-                        <p style={{ color: "green" }}>Details</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <AddiontionalFeature />
       <Button>Continue</Button>
     </div>
+  );
+};
+
+const AddiontionalFeature = () => {
+  const [isSelected, setIsSelected] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const toggleIsSelected = () => {
+    setIsSelected(!isSelected);
+    console.log(isSelected);
+  };
+
+  const toggleIsFavorite = () => {
+    setIsFavorite(!isFavorite);
+    console.log(isFavorite);
+  };
+
+  return (
+    <>
+      {featuresList.map((feature) => {
+        const { id, icon, title } = feature;
+
+        return (
+          <div className="feature-section" key={id}>
+            <div className="fc-top">
+              <div className="fc-left">
+                {icon}
+                <h2 className="feature-title">{title}</h2>
+              </div>
+              <AiOutlineDown />
+            </div>
+
+            <div className="fc-bottom">
+              {feature.features.map((feature) => (
+                <div
+                  onClick={toggleIsSelected}
+                  className={`sub-feature ${isSelected && "selected"}`}
+                >
+                  <h2 className="sb-title">
+                    {feature.title}
+                    <AiOutlineHeart
+                      className="heart-icon"
+                      onClick={toggleIsFavorite}
+                    />
+                  </h2>
+                  <div className="sb-details">
+                    <p>${feature.price.toLocaleString()}</p>
+                    <p style={{ color: "green" }}>Details</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 };
 

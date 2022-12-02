@@ -14,7 +14,7 @@
     width: 25vw;
     min-width: 400px;
     min-height: 800px;
-    background-color: #fefefe;
+    background-color: var(--bg);
     z-index: 999;
 }
 

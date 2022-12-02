@@ -1,4 +1,5 @@
 .features {
+  z-index: 999;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -10,10 +11,12 @@
 
 .feature-section {
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: wrap;
   background-color: #ffffff;
   padding: 20px 32px;
-  margin: 10px 20px;
+  margin: 10px 0px;
   border: 1px solid lightgray;
   border-radius: 4px;
 }
@@ -21,7 +24,8 @@
 .fc-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .fc-left {
@@ -33,32 +37,26 @@
 .fc-bottom {
   display: flex;
   flex-flow: row wrap;
-  margin-top: 16px;
-  margin-left: -16px;
-  width: calc(100% + 16px);
-  margin-left: -16px;
-  flex-grow: 0;
   flex-basis: 50%;
+  gap: 20px;
 }
 
 .sub-feature {
   color: rgba(0, 0, 0, 0.87);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   background-color: rgb(252, 252, 250);
-  border-width: 2px;
-  border-style: solid;
-  border-color: rgb(93, 140, 70);
-  border-radius: 4px;
   box-shadow: rgb(24 24 26 / 8%) 8px 8px 16px;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-
-  position: relative;
-  flex: 1 1 auto;
+  border: 1px solid black;
+  
   cursor: pointer;
+
+  display: flex;
+  flex-flow: row wrap;
   padding: 24px;
+}
+
+.selected {
+  border-color: rgb(93, 140, 70);
 }
 
 .sb-title {
@@ -67,5 +65,12 @@
   font-weight: normal;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.sb-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
