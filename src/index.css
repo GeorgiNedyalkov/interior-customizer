@@ -19,10 +19,6 @@ body {
     overflow: hidden;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 :root {
     /* --bg: rgb(245, 243, 243); */
     --bg: #FAF8F5;
