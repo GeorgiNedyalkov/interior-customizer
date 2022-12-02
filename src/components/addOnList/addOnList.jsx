@@ -6,7 +6,7 @@ const AddOnList = () => {
   return (
     <div className="sidebar-bottom">
       <h1 className="title">Do you need parking or storage?</h1>
-      <div className="feautres">
+      <div className="features">
         {addOns.map(({ title, price, icon }) => {
           return (
             <Feature
