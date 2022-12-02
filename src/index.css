@@ -19,6 +19,18 @@
     --sidebar-size: 25vw;
 }
 
+body {
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Repro', sans-serif;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: -0.01rem;
+    background-color: #FAF8F5;
+
+}
+
 li {
     list-style: none;
 }
@@ -33,10 +45,14 @@ a {
   font-size: 2rem;
   font-weight: lighter;
   color: rgb(61, 61, 61);
-  padding: 20px 20px;
+  padding-bottom: 20px;
 }
 
 .description {
   font-size: 1rem;
-  padding: 10px 20px;
+  padding-bottom: 20px;
+}
+
+.sidebar-wrapper {
+    padding: 32px;
 }

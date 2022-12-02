@@ -5,7 +5,9 @@ const Sidebar = ({ children }) => {
   return (
     <div>
       <SidebarMenu />
-      <div className="sidebar">{children}</div>
+      <div className="sidebar">
+        <div className="sidebar-wrapper">{children}</div>
+      </div>
     </div>
   );
 };

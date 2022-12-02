@@ -9,6 +9,7 @@ const Slider = ({ chosenDesign }) => {
   const [design, setDesign] = useState(standardDesign);
 
   useEffect(() => {
+    console.log(design);
     const lastIndex = design.length - 1;
 
     if (index < 0) {

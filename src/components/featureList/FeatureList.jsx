@@ -13,7 +13,7 @@ const FeatureList = () => {
         touch to help you finalize your selections.
       </p>
 
-      {/* <div className="features-section">
+      <div className="features-section">
         {featuresList.map((feature) => {
           const { id, icon, title } = feature;
 
@@ -27,13 +27,11 @@ const FeatureList = () => {
                 <AiOutlineDown />
               </div>
 
-              <div className="fc-bottom">
-
-              </div>
+              <div className="fc-bottom"></div>
             </div>
           );
         })}
-      </div> */}
+      </div>
 
       {featuresList.map((feature) => (
         <>
