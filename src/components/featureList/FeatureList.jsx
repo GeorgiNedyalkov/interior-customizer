@@ -14,7 +14,6 @@ const FeatureList = () => {
       </p>
 
       <AddiontionalFeature />
-      <Button>Continue</Button>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import HomeList from "../../components/homeList/HomeList";
+import Button from "../../components/button/Button";
+import { Link } from "react-router-dom";
 import "./Size.css";
 
 const Size = () => {
@@ -16,6 +18,11 @@ const Size = () => {
         <div className="sidebar">
           <Sidebar>
             <HomeList />
+            <Button>
+              <Link to="/designer" className="link">
+                Continue
+              </Link>
+            </Button>
           </Sidebar>
         </div>
       </div>

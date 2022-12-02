@@ -60,3 +60,7 @@ a {
 .sidebar-wrapper {
     padding: 32px;
 }
+
+.link {
+    color: inherit;
+}

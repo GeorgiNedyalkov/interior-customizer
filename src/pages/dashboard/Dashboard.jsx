@@ -20,7 +20,7 @@ const Dashboard = () => {
               match.
             </p>
             <Button>
-              <Link to="/" style={{ color: "inherit" }}>
+              <Link to="/" className="link">
                 Find a home
               </Link>
             </Button>

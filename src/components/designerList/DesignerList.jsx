@@ -43,8 +43,6 @@ const DesignerList = () => {
           </div>
         );
       })}
-
-      <Button>Continue</Button>
     </>
   );
 };

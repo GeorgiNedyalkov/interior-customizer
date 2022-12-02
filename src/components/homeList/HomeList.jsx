@@ -20,7 +20,6 @@ const HomeList = () => {
           );
         })}
       </div>
-      <Button>Continue</Button>
     </>
   );
 };
