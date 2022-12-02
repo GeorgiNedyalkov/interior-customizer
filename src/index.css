@@ -7,6 +7,17 @@
     box-sizing: border-box;
 }
 
+body {
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Repro', sans-serif;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: -0.01rem;
+    background-color: #FAF8F5;
+}
+
 :root {
     --bg: rgb(245, 243, 243);
     /* --text-color: rgb(245, 242, 242); */
@@ -17,18 +28,6 @@
     --category-color: rgb(66, 66, 66);
     --nav-size: 60px;
     --sidebar-size: 25vw;
-}
-
-body {
-    color: rgba(0, 0, 0, 0.87);
-    margin: 0;
-    font-size: 1rem;
-    font-family: 'Repro', sans-serif;
-    font-weight: 400;
-    line-height: 1rem;
-    letter-spacing: -0.01rem;
-    background-color: #FAF8F5;
-
 }
 
 li {
@@ -42,15 +41,16 @@ a {
 
 /* Classes */
 .title {
-  font-size: 2rem;
-  font-weight: lighter;
-  color: rgb(61, 61, 61);
-  padding-bottom: 20px;
+    color: rgb(61, 61, 61);
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    padding-bottom: 30px;
 }
 
 .description {
-  font-size: 1rem;
-  padding-bottom: 20px;
+    font-size: 1rem;
+    padding-bottom: 20px;
 }
 
 .sidebar-wrapper {

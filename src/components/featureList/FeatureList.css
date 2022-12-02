@@ -9,6 +9,8 @@
 }
 
 .feature-section {
+  display: flex;
+  flex-flow: row wrap;
   background-color: #ffffff;
   padding: 20px 32px;
   margin: 10px 20px;
