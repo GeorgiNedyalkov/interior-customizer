@@ -16,12 +16,14 @@ body {
     line-height: 1rem;
     letter-spacing: -0.01rem;
     background-color: #FAF8F5;
+    overflow: hidden;
 }
 
 :root {
-    --bg: rgb(245, 243, 243);
+    /* --bg: rgb(245, 243, 243); */
+    --bg: #FAF8F5;
     /* --text-color: rgb(245, 242, 242); */
-    --text-color: rgb(0, 0, 0, 0.6);
+    --text-color: rgb(0, 0, 0, 0.7);
     --green-color: rgb(3, 175, 3);
     --border: 1px solid lightgray; 
     --shadow: rgb(24 24 26 / 8%) 8px 8px 16px;
@@ -38,7 +40,6 @@ a {
     text-decoration: none;
 }
 
-
 /* Classes */
 .title {
     color: rgb(61, 61, 61);
@@ -49,7 +50,10 @@ a {
 }
 
 .description {
+    color: var(--text-color);
     font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3rem;
     padding-bottom: 20px;
 }
 

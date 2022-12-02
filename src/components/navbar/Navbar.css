@@ -5,7 +5,7 @@
     height: var(--nav-size);
     width: 100vw;
     color: rgba(0, 0, 0, 0.6);
-    background-color: #efefef;
+    background-color: var(--bg);
 }
 
 .nav-title {
