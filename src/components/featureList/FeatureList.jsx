@@ -13,36 +13,28 @@ const FeatureList = () => {
       </p>
 
       {featuresList.map((feature) => {
-        return <PrimaryFeature {...feature} />;
+        return <PrimaryFeature key={feature.id} {...feature} />;
       })}
     </div>
   );
 };
 
-const PrimaryFeature = ({ icon, title, id, features }) => {
+const PrimaryFeature = ({ icon, title, features }) => {
   const [showFeature, setShowFeature] = useState(false);
 
   return (
-    <div
-      className="feature-section"
-      key={id}
-      onClick={() => setShowFeature(!showFeature)}
-    >
-      <div className="fc-top">
+    <div className="feature-section">
+      <div className="fc-top" onClick={() => setShowFeature(!showFeature)}>
         <div className="fc-left">
           {icon}
-          <h2 className="feature-title">{title}</h2>
+          <h4 className="feature-title">{title}</h4>
         </div>
         <AiOutlineDown />
       </div>
 
-      {showFeature && (
-        <div className="fc-bottom">
-          {features.map((feature) => (
-            <SubFeature {...feature} />
-          ))}
-        </div>
-      )}
+      <div className="fc-bottom">
+        {showFeature && features.map((feature) => <SubFeature {...feature} />)}
+      </div>
     </div>
   );
 };
@@ -51,26 +43,18 @@ const SubFeature = ({ title, price }) => {
   const [isSelected, setIsSelected] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
 
-  const toggleIsSelected = () => {
-    setIsSelected(!isSelected);
-  };
-
-  const toggleIsFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
   return (
     <div
-      onClick={toggleIsSelected}
+      onClick={() => setIsSelected(!isSelected)}
       className={`sub-feature ${isSelected && "selected"}`}
     >
-      <h2 className="sb-title">
-        {title}
+      <div className="sb-top">
+        <h2 className="sb-title">{title}</h2>
         <AiOutlineHeart
           className={`heart-icon ${isFavorite && "favorite"}`}
-          onClick={toggleIsFavorite}
+          onClick={() => setIsFavorite(!isFavorite)}
         />
-      </h2>
+      </div>
       <div className="sb-details">
         <p>${price.toLocaleString()}</p>
         <p style={{ color: "green" }}>Details</p>

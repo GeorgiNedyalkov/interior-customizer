@@ -13,7 +13,6 @@
   display: flex;
   flex-flow: column wrap;
   background-color: #ffffff;
-  padding: 20px 32px;
   margin: 10px 0px;
   border: 1px solid lightgray;
   border-radius: 4px;
@@ -23,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  padding: 20px;
 }
 
 .fc-left {
@@ -33,35 +32,52 @@
 }
 
 .fc-bottom {
+  width: calc(100% - 16px);
   display: flex;
   flex-flow: row wrap;
-  flex-basis: 50%;
-  gap: 20px;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(66, 66, 66);
 }
 
 .sub-feature {
-  color: rgba(0, 0, 0, 0.87);
-  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  background-color: rgb(252, 252, 250);
-  box-shadow: rgb(24 24 26 / 8%) 8px 8px 16px;
-  border: 1px solid black;
+  border: 1px solid rgb(198, 193, 193);
   cursor: pointer;
-  flex-flow: row wrap;
   padding: 24px;
-  display: flex;
   align-items: center;
   justify-content: center;
+  height: 180px;
+  flex-basis: 45%;
+  margin-bottom: 16px;
+  margin-left: 16px;
+}
+
+@media (max-width: 1024px){
+  .sub-feature {
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 100%;
+  }
 }
 
 
-.sb-title {
-  color: rgb(136, 136, 136);
-  font-size: 1.3rem;
-  font-weight: normal;
+.sb-top {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sb-title {
+  color: rgb(136, 136, 136);
+  font-size: 1.25rem;
+  line-height: 1.1rem;
+  font-weight: 400;
 }
 
 .sb-details {
