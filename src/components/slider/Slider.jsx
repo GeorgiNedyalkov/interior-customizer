@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
 import "./Slider.css";
-// import { bigDesign } from "../../data/data";
+import { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
 const Slider = ({ design }) => {
