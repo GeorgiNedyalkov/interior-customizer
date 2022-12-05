@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -15,7 +16,9 @@ const Login = () => {
       <div className="right">
         <div className="wrapper">
           <div className="header">
-            <h3>Log In</h3>
+            <h3>
+              <Link to="/dashboard">Log In</Link>
+            </h3>
             <p className="text">
               Don't have an account?{" "}
               <a href="/singup" className="text" style={{ fontWeight: "bold" }}>

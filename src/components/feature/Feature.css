@@ -36,17 +36,3 @@
     font-weight: 300;
 }
 
-.icon {
-    font-size: 2.5rem;
-}
-
-.heart-icon {
-    font-size: 2.5rem;
-
-    cursor: pointer;
-    color: var(--green-color);
-}
-
-.heart-icon:hover {
-    color: green;
-}

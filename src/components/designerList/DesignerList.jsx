@@ -1,19 +1,9 @@
 import "./DesignerList.css";
 import { useState } from "react";
-import {
-  designerList,
-  kattyDesign,
-  bigDesign,
-  standardDesign,
-} from "../../data/data";
-
+import { designerList } from "../../data/data";
 import { AiOutlineHeart } from "react-icons/ai";
-import Button from "../button/Button";
 
 const DesignerList = () => {
-  const [design, setDesign] = useState(standardDesign);
-  const [isSelected, setIsSelected] = useState(false);
-
   return (
     <>
       <h1 className="title">Who is your preferred designer?</h1>
@@ -23,28 +13,36 @@ const DesignerList = () => {
         included.
       </p>
 
-      {designerList.map((designer) => {
-        const { id, title, img, type } = designer;
-
-        return (
-          <div
-            className={`designer-section ${isSelected && "selected"}`}
-            key={id}
-            onClick={() => console.log(title)}
-          >
-            <div className="designer-left">
-              <img className="designer-img" src={img} alt={title} />
-              <div className="designer-details">
-                <h2 className="designer-title">{title}</h2>
-                <p className="design-type">{type.toString()}</p>
-              </div>
-            </div>
-            <AiOutlineHeart className="heart-icon" />
-          </div>
-        );
-      })}
+      {designerList.map((designer) => (
+        <Designer {...designer} />
+      ))}
     </>
   );
 };
 
 export default DesignerList;
+
+const Designer = ({ id, title, img, type }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [isSelected, setIsSelected] = useState(false);
+
+  return (
+    <div
+      onClick={() => setIsSelected(!isSelected)}
+      className={`designer-section ${isSelected && "selected"}`}
+      key={id}
+    >
+      <div className="designer-left">
+        <img className="designer-img" src={img} alt={title} />
+        <div className="designer-details">
+          <div className="designer-title">{title}</div>
+          <div className="design-type">{type.toString()}</div>
+        </div>
+      </div>
+      <AiOutlineHeart
+        onClick={() => setIsFavorite(!isFavorite)}
+        className={`heart-icon ${isFavorite && "favorite"}`}
+      />
+    </div>
+  );
+};

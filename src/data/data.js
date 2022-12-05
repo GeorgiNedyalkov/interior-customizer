@@ -1,13 +1,6 @@
 import { MdSingleBed } from "react-icons/md";
 import { FaCarSide } from "react-icons/fa";
 import { TbBuildingWarehouse } from "react-icons/tb";
-import {
-  FcLandscape,
-  FcEditImage,
-  FcCloseUpMode,
-  FcFilmReel,
-  FcPodiumWithSpeaker,
-} from "react-icons/fc";
 
 // DESIGNS data
 export const bigDesign = [
@@ -103,7 +96,7 @@ export const kattyDesign = [
     id: 4,
     images: [
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_tiered.png&h=0&w=1200&op=resize",
-      // "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_half.png&h=0&w=1200&op=resize",
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_half.png&h=0&w=1200&op=resize",
     ],
   },
 ];

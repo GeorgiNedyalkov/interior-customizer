@@ -1,4 +1,3 @@
-import Button from "../button/Button";
 import Feature from "../feature/Feature";
 import { addOns } from "../../data/data";
 
@@ -16,7 +15,6 @@ const AddOnList = () => {
             />
           );
         })}
-        <Button>See available homes</Button>
       </div>
     </div>
   );

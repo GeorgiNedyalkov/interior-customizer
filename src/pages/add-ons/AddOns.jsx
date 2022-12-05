@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import AddOnList from "../../components/addOnList/addOnList";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { addOns } from "../../data/data";
+import Button from "../../components/button/Button";
 
 const AddOns = () => {
   console.log(addOns);
@@ -20,6 +21,7 @@ const AddOns = () => {
         <div className="sidebar">
           <Sidebar>
             <AddOnList />
+            <Button>See available homes</Button>
           </Sidebar>
         </div>
       </div>

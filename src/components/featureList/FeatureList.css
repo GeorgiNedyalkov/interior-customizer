@@ -47,17 +47,12 @@
   background-color: rgb(252, 252, 250);
   box-shadow: rgb(24 24 26 / 8%) 8px 8px 16px;
   border: 1px solid black;
-  
   cursor: pointer;
-
   display: flex;
   flex-flow: row wrap;
   padding: 24px;
 }
 
-.selected {
-  border-color: rgb(93, 140, 70);
-}
 
 .sb-title {
   color: rgb(136, 136, 136);
@@ -73,4 +68,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.selected {
+    border: 2px solid rgb(13, 172, 82);
 }
