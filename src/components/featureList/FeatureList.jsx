@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AiOutlineDown, AiOutlineHeart } from "react-icons/ai";
 import { featuresList } from "../../data/featuresList";
-import Button from "../button/Button";
 import "./FeatureList.css";
 
 const FeatureList = () => {

@@ -140,6 +140,7 @@ export const designerList = [
   {
     id: 1,
     title: "Nabr",
+    design: standardDesign,
     type: "Standard",
     img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/nabr_logo.svg&h=0&w=720&op=resize",
     comingSoon: false,
@@ -147,12 +148,14 @@ export const designerList = [
   {
     id: 2,
     title: "Bjarke Ingels Group",
+    design: bigDesign,
     type: ["Premium", "Limited Edition"],
     img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/big_logo.svg&h=0&w=720&op=resize",
     comingsoon: true,
   },
   {
     id: 3,
+    design: kattyDesign,
     title: "Katty Shiebeck Studio",
     type: ["Premium", "Limited Edition"],
     img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/katty/katty_logo.svg&h=0&w=720&op=resize",

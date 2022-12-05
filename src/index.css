@@ -71,7 +71,6 @@ a {
 
 .heart-icon {
     font-size: 2.5rem;
-
     cursor: pointer;
     color: var(--green-color);
 }
@@ -79,8 +78,6 @@ a {
 .heart-icon:hover {
     color: green;
 }
-
-
 
 .favorite {
     color: rgb(255, 0, 0);

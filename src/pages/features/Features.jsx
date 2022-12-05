@@ -6,13 +6,14 @@ import FeatureList from "../../components/featureList/FeatureList";
 import Button from "../../components/button/Button";
 import { Link } from "react-router-dom";
 import "./Features.css";
+import { kattyDesign } from "../../data/data";
 
 const Features = () => {
   return (
     <div>
       <Navbar />
       <div className="main">
-        <Slider />
+        <Slider design={kattyDesign} />
         <div className="sidebar">
           <Sidebar>
             <FeatureList />

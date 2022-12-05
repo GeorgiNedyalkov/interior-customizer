@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import "./Slider.css";
 // import { bigDesign } from "../../data/data";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { standardDesign } from "../../data/data";
+import { standardDesign, kattyDesign, bigDesign } from "../../data/data";
 
-const Slider = ({ chosenDesign }) => {
+const Slider = ({ design }) => {
   const [index, setIndex] = useState(0);
-  const [design, setDesign] = useState(standardDesign);
 
   useEffect(() => {
     const lastIndex = design.length - 1;

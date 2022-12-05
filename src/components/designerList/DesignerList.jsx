@@ -3,7 +3,7 @@ import { useState } from "react";
 import { designerList } from "../../data/data";
 import { AiOutlineHeart } from "react-icons/ai";
 
-const DesignerList = () => {
+const DesignerList = ({ selected, setSelected }) => {
   return (
     <>
       <h1 className="title">Who is your preferred designer?</h1>
@@ -14,7 +14,12 @@ const DesignerList = () => {
       </p>
 
       {designerList.map((designer) => (
-        <Designer {...designer} />
+        <Designer
+          key={designer.id}
+          {...designer}
+          selected={selected}
+          setSelected={setSelected}
+        />
       ))}
     </>
   );
@@ -22,13 +27,16 @@ const DesignerList = () => {
 
 export default DesignerList;
 
-const Designer = ({ id, title, img, type }) => {
+const Designer = ({ id, title, img, type, design, setSelected }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
 
   return (
     <div
-      onClick={() => setIsSelected(!isSelected)}
+      onClick={() => {
+        setIsSelected(!isSelected);
+        setSelected(design);
+      }}
       className={`designer-section ${isSelected && "selected"}`}
       key={id}
     >
