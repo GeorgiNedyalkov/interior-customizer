@@ -33,7 +33,10 @@ const PrimaryFeature = ({ icon, title, features }) => {
       </div>
 
       <div className="fc-bottom">
-        {showFeature && features.map((feature) => <SubFeature {...feature} />)}
+        {showFeature &&
+          features.map((feature) => {
+            return <SubFeature {...feature} />;
+          })}
       </div>
     </div>
   );
