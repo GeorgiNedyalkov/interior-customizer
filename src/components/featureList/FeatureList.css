@@ -11,9 +11,7 @@
 
 .feature-section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: wrap;
+  flex-flow: column wrap;
   background-color: #ffffff;
   padding: 20px 32px;
   margin: 10px 0px;
@@ -24,7 +22,7 @@
 .fc-top {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
@@ -48,9 +46,11 @@
   box-shadow: rgb(24 24 26 / 8%) 8px 8px 16px;
   border: 1px solid black;
   cursor: pointer;
-  display: flex;
   flex-flow: row wrap;
   padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

@@ -114,8 +114,23 @@ export const featuresList = [
     icon: <FcPodiumWithSpeaker className="icon" />,
     features: [
       {
-        title: "",
-        price: 0,
+        title: "Heated Bathroom Floors",
+        price: 2_000,
+        details: "",
+      },
+      {
+        title: "Towel Warmer",
+        price: 1_000,
+        details: "",
+      },
+      {
+        title: "Smart Window Shades",
+        price: 7_000,
+        details: "",
+      },
+      {
+        title: "Closets Upgrade",
+        price: 2_500,
         details: "",
       },
     ],
