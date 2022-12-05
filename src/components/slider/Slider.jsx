@@ -14,6 +14,7 @@ const Slider = ({ design }) => {
     if (index > lastIndex) {
       setIndex(0);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   return (
