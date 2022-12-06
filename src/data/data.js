@@ -6,9 +6,10 @@ import { TbBuildingWarehouse } from "react-icons/tb";
 export const bigDesign = [
   {
     id: 1,
+    name: "BIG",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/big_design_01.jpg&h=0&w=1200&op=resize",
-    caption: `BIG’s design brings the firm’s sought-after architectural sensibility to Nabr homes. 
+    caption: `BIG’s design brings the firm’s sought-after architectural sensibility to Nabr homes.
     The package will be available at an additional cost of approximately 10% of the price of your Nabr home.`,
   },
   {
@@ -20,16 +21,18 @@ export const bigDesign = [
   },
   {
     id: 3,
+    name: "BIG",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/big_design_03.jpg&h=0&w=1200&op=resize",
-    caption: `The bedroom features elegantly simple details, like a custom integrated desk 
+    caption: `The bedroom features elegantly simple details, like a custom integrated desk
     for a work from home environment that’s at once luxurious and pragmatic.`,
   },
   {
     id: 4,
+    name: "BIG",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/big/palette.jpg&h=0&w=1200&op=resize",
-    caption: `BIG emphasizes natural materials of the highest quality: wide oak floor planks, 
+    caption: `BIG emphasizes natural materials of the highest quality: wide oak floor planks,
     a light finish on exposed cross laminated timber ceilings, and stone in the bathrooms.`,
   },
 ];
@@ -37,20 +40,55 @@ export const bigDesign = [
 export const standardDesign = [
   {
     id: 1,
+    name: "Nabr",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/nabr_design_01.jpg&h=0&w=1200&op=resize",
     caption: `We’ve designed a neutral canvas that you can customize to your lifestyle. 
               Its natural material palette creates a seamless transition from indoor to out.`,
+    popups: [
+      {
+        title: "Finishes",
+        position: "bottom-right",
+        desc: `The copper-nickel finish of the terrace extends the metal accents
+              of interior hardware fixtures to the outdoors.`,
+      },
+      {
+        title: "Flooring",
+        position: "bottom-right",
+        desc: `Wide-plank oak flooring inside transitions to a light stone outside.
+              The copper-nickel finish of the terrace extends the metal accents
+              of interior hardware fixtures to the outdoors.`,
+      },
+    ],
   },
   {
     id: 2,
+    name: "Nabr",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/nabr_design_02.jpg&h=0&w=1200&op=resize",
     caption: `Nabr’s design updates the mid-century modern aesthetic for today. 
               It’s high design meets California casual with sustainable, state-of-the-art finishes and appliances.`,
+    popups: [
+      {
+        title: "Cabinetry",
+        position: "bottom-right",
+        desc: `Eight foot high kitchen cabinets in a light-oak finish.`,
+      },
+      {
+        title: "Appliances",
+        position: "bottom-right",
+        desc: `Miele appliances package with an induction cooktop and integrated dishwasher and fridge.`,
+      },
+      {
+        title: "Kitcken Island",
+        position: "bottom-right",
+        desc: `Extra-wide built-in island with quartz countertops and integrated stainless-steel microwave.`,
+      },
+    ],
   },
   {
     id: 3,
+    name: "Nabr",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/nabr_design_03.jpg&h=0&w=1200&op=resize",
     caption: `Our design balances versatile, high-performance materials with a warm, calming palette. 
@@ -58,17 +96,44 @@ export const standardDesign = [
   },
   {
     id: 4,
+    name: "Nabr",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/steam_shower/steamshower_diagram_base.png&h=0&w=1200&op=resize",
     caption: `The Nabr design features thoughtful bathrooms with a spa-like array of materials: 
     stone tiling, light-wood details, and refined metal fixtures.`,
+    popups: [
+      {
+        title: "Fixtures",
+        position: "bottom-right",
+        desc: `Satin-nickel bathroom fixtures for a modern sensibility.`,
+      },
+      {
+        title: "Appliances",
+        position: "bottom-right",
+        desc: `Neutral-tone tiles lend an air of tranquility.`,
+      },
+      {
+        title: "Vanity",
+        position: "bottom-right",
+        desc: `Floating vanity and medicine-cabinet mirror.`,
+      },
+    ],
   },
   {
     id: 5,
+    name: "Nabr",
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/palette.jpg&h=0&w=1200&op=resize",
     caption: `Nabr’s wood-on-white material palette blends understated, 
     neutral materials with a handcrafted quality and locally-sourced products and finishes.`,
+    popups: [
+      {
+        title: "Finishes",
+        position: "bottom-right",
+        desc: `The copper-nickel finish of the terrace extends the metal accents
+              of interior hardware fixtures to the outdoors.`,
+      },
+    ],
   },
 ];
 
@@ -77,8 +142,8 @@ export const kattyDesign = [
     id: 1,
     image:
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_lush.png&h=0&w=1200&op=resize",
-    caption: `Designed to match your terrace’s dimensions and material palette, 
-              these self-watering planters come planted with one of three packages. 
+    caption: `Designed to match your terrace’s dimensions and material palette,
+              these self-watering planters come planted with one of three packages.
               Choose Lush for a verdant, private terrace experience.`,
   },
   {

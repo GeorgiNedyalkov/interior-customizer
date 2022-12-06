@@ -1,3 +1,7 @@
+.slider {
+    position: relative;
+}
+
 figure {
     position: absolute;
     opacity: 0;

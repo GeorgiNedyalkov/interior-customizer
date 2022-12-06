@@ -1,8 +1,12 @@
 import "./Slider.css";
 import { useState, useEffect } from "react";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import Modal from "../modal/Modal";
+import {
+  FiChevronRight,
+  FiChevronLeft,
+  FiCloudLightning,
+} from "react-icons/fi";
 import Badge from "../badge/Badge";
+import Popup from "../popup/Popup";
 
 const Slider = ({ design }) => {
   const [index, setIndex] = useState(0);
@@ -21,7 +25,8 @@ const Slider = ({ design }) => {
   return (
     <div className="slider">
       {design.map((slide, slideIndex) => {
-        const { id, image, caption } = slide;
+        const { id, image, caption, name } = slide;
+
         let position = "nextSlide";
         if (slideIndex === index) {
           position = "activeSlide";
@@ -32,9 +37,19 @@ const Slider = ({ design }) => {
         ) {
           position = "lastSlide";
         }
+
         return (
           <figure key={id} className={`${position}`}>
-            <Badge name={"Nabr"} />
+            <Badge name={name} />
+
+            {slide.popups &&
+              slide.popups.map((popup) => {
+                return (
+                  <Popup position={popup.position} title={popup.title}>
+                    {popup.desc}
+                  </Popup>
+                );
+              })}
 
             <img src={image} alt="" />
             {index > 0 && (
@@ -47,7 +62,6 @@ const Slider = ({ design }) => {
                 <FiChevronRight />
               </button>
             )}
-
             <figcaption className="slider-caption">
               {caption}
               <div className="dot-container">
