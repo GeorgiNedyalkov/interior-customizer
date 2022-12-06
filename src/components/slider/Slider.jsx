@@ -1,6 +1,8 @@
 import "./Slider.css";
 import { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import Modal from "../modal/Modal";
+import Badge from "../badge/Badge";
 
 const Slider = ({ design }) => {
   const [index, setIndex] = useState(0);
@@ -14,7 +16,6 @@ const Slider = ({ design }) => {
     if (index > lastIndex) {
       setIndex(0);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   return (
@@ -33,17 +34,20 @@ const Slider = ({ design }) => {
         }
         return (
           <figure key={id} className={`${position}`}>
+            <Badge name={"Nabr"} />
+
+            <img src={image} alt="" />
             {index > 0 && (
               <button className="prev" onClick={() => setIndex(index - 1)}>
                 <FiChevronLeft />
               </button>
             )}
-            <img src={image} alt="" />
             {index !== design.length - 1 && (
               <button className="next" onClick={() => setIndex(index + 1)}>
                 <FiChevronRight />
               </button>
             )}
+
             <figcaption className="slider-caption">
               {caption}
               <div className="dot-container">

@@ -1,7 +1,8 @@
 .modal {
     position: absolute;
     top: 500px;
-    left: 1000px;
+    left: 200px;
+    z-index: 1;
 }
 
 .modal-btn {
@@ -16,6 +17,8 @@
     align-items: center;
     gap: 10px;
 }
+
+
 
 .modal-btn.closed {
     background-color:rgb(93, 140, 70);
@@ -36,6 +39,7 @@
     width: 360px;
     background-color: rgb(252, 252, 250);
     box-shadow: rgb(24 24 26 / 16%) 0px 4px 16px;
+    margin: 5px 0px;
     padding: 18px 24px;
     border-radius: 4px;
     opacity: 0.8;
