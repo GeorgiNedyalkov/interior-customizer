@@ -48,13 +48,17 @@ export const standardDesign = [
     popups: [
       {
         title: "Finishes",
-        position: "bottom-right",
+        topPosition: "32vh",
+        leftPosition: "38vw",
+        ancor: "bottom-right",
         desc: `The copper-nickel finish of the terrace extends the metal accents
               of interior hardware fixtures to the outdoors.`,
       },
       {
         title: "Flooring",
-        position: "bottom-right",
+        topPosition: "50vh",
+        leftPosition: "45vw",
+        ancor: "bottom-right",
         desc: `Wide-plank oak flooring inside transitions to a light stone outside.
               The copper-nickel finish of the terrace extends the metal accents
               of interior hardware fixtures to the outdoors.`,
@@ -71,17 +75,23 @@ export const standardDesign = [
     popups: [
       {
         title: "Cabinetry",
-        position: "bottom-right",
+        topPosition: "24vh",
+        leftPosition: "7vw",
+        ancor: "bottom-right",
         desc: `Eight foot high kitchen cabinets in a light-oak finish.`,
       },
       {
         title: "Appliances",
-        position: "bottom-right",
+        topPosition: "46vh",
+        leftPosition: "8vw",
+        ancor: "bottom-right",
         desc: `Miele appliances package with an induction cooktop and integrated dishwasher and fridge.`,
       },
       {
-        title: "Kitcken Island",
-        position: "bottom-right",
+        title: "Kitcen Island",
+        topPosition: "58vh",
+        leftPosition: "13vw",
+        ancor: "bottom-right",
         desc: `Extra-wide built-in island with quartz countertops and integrated stainless-steel microwave.`,
       },
     ],
@@ -104,17 +114,23 @@ export const standardDesign = [
     popups: [
       {
         title: "Fixtures",
-        position: "bottom-right",
+        topPosition: "19vh",
+        leftPosition: "22vw",
+        ancor: "bottom-right",
         desc: `Satin-nickel bathroom fixtures for a modern sensibility.`,
       },
       {
-        title: "Appliances",
-        position: "bottom-right",
+        title: "Finishes",
+        topPosition: "30vh",
+        leftPosition: "53vw",
+        ancor: "bottom-left",
         desc: `Neutral-tone tiles lend an air of tranquility.`,
       },
       {
         title: "Vanity",
-        position: "bottom-right",
+        topPosition: "62.5vh",
+        leftPosition: "19vw",
+        ancor: "top-right",
         desc: `Floating vanity and medicine-cabinet mirror.`,
       },
     ],
@@ -126,43 +142,41 @@ export const standardDesign = [
       "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/nabr/palette.jpg&h=0&w=1200&op=resize",
     caption: `Nabr’s wood-on-white material palette blends understated, 
     neutral materials with a handcrafted quality and locally-sourced products and finishes.`,
-    popups: [
-      {
-        title: "Finishes",
-        position: "bottom-right",
-        desc: `The copper-nickel finish of the terrace extends the metal accents
-              of interior hardware fixtures to the outdoors.`,
-      },
-    ],
   },
 ];
 
 export const kattyDesign = [
   {
     id: 1,
+    name: "Katty Shiebeck Studio",
     image:
-      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_lush.png&h=0&w=1200&op=resize",
-    caption: `Designed to match your terrace’s dimensions and material palette,
-              these self-watering planters come planted with one of three packages.
-              Choose Lush for a verdant, private terrace experience.`,
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/katty/katty_design_01.jpg&h=0&w=1200&op=resize",
+    caption: `The Katty Schiebeck Studio design features a subdued color palette, luxurious materials, and earthy, sculptural elements. 
+    The package will be available for purchase at an additional cost of approximately 20% of the purchase price of your Nabr home.`,
   },
   {
     id: 2,
+    name: "Katty Shiebeck Studio",
     image:
-      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/mid_planter.png&h=0&w=1200&op=resize",
-    caption: `The planters are custom-designed to match your terrace’s dimensions and material palette.`,
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/katty/katty_design_02.jpg&h=0&w=1200&op=resize",
+    caption: `Katty Schiebeck Studio brings its impeccable eye for detail to its design. 
+    The design relies on earthy shades, wooden millwork, and rounded edges to create an elevated and organic feel.`,
   },
   {
     id: 3,
+    name: "Katty Shiebeck Studio",
     image:
-      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/irrigation.png&h=0&w=1200&op=resize",
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/katty/katty_design_03.jpg&h=0&w=1200&op=resize",
+    caption:
+      "For the bedroom, Katty Schiebeck Studio has created a timeless, ultra-refined environment.",
   },
   {
     id: 4,
-    images: [
-      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_tiered.png&h=0&w=1200&op=resize",
-      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/planter_spec_half.png&h=0&w=1200&op=resize",
-    ],
+    name: "Katty Shiebeck Studio",
+    image:
+      "https://images.nabr.com/display?path=ConfigOptions/SOFA1/designer/katty/palette.jpg&h=0&w=1200&op=resize",
+    caption:
+      "Understated, sandy hues bring out the textures and details of the design.",
   },
 ];
 

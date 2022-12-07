@@ -6,27 +6,123 @@ import {
   FcPodiumWithSpeaker,
 } from "react-icons/fc";
 
-export const featuresList = [
+export const subfeature = {
+  id: 1,
+  name: "Terrace Landscaping",
+  price: 3_000,
+  slides: [
+    {
+      img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_base.png&h=0&w=1200&op=resize",
+      details: `Designed to match your terrace’s dimensions and material palette, 
+          these self-watering planters come planted with one of three packages.
+           Choose Lush for a verdant, private terrace experience.`,
+      options: [
+        {
+          id: 10,
+          name: "Lush",
+          caption: `Designed to match your terrace’s dimensions and material palette, 
+            these self-watering planters come planted with one of three packages. 
+            Choose Lush for a verdant, private terrace experience.`,
+          img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_lush.png&h=0&w=1200&op=resize",
+        },
+        {
+          id: 20,
+          name: "California Native",
+          caption: `The California native package offers easy-maintenance, drought-tolerant plants.`,
+          img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_native.png&h=0&w=1200&op=resize",
+        },
+        {
+          id: 30,
+          name: "Culinary",
+          caption: `Turn your terrace into an expansive home garden with the herbal planting package.`,
+          img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_culinary.png&h=0&w=1200&op=resize",
+        },
+      ],
+    },
+    {
+      id: 2,
+      img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/mid_planter.png&h=0&w=1200&op=resize",
+      details: `The planters are custom-designed to match your terrace’s dimensions and material palette.`,
+    },
+    {
+      id: 3,
+      img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/irrigation.png&h=0&w=1200&op=resize",
+      details: `Apples`,
+    },
+  ],
+};
+
+export const outdoorLivingFeatures = [
   {
     id: 1,
-    title: "Outdoor Living",
-    category: "outdoor",
-    icon: <FcLandscape className="icon" />,
-    features: [
+    name: "Terrace Landscaping",
+    price: 3_000,
+    slides: [
       {
-        title: "Terrace Landscaping",
-        price: 3_000,
+        id: 1,
+        img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_base.png&h=0&w=1200&op=resize",
         details: `Designed to match your terrace’s dimensions and material palette, 
           these self-watering planters come planted with one of three packages.
            Choose Lush for a verdant, private terrace experience.`,
+        options: [
+          {
+            id: 10,
+            name: "Lush",
+            caption: `Designed to match your terrace’s dimensions and material palette, 
+            these self-watering planters come planted with one of three packages. 
+            Choose Lush for a verdant, private terrace experience.`,
+            img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_lush.png&h=0&w=1200&op=resize",
+          },
+          {
+            id: 20,
+            name: "California Native",
+            caption: `The California native package offers easy-maintenance, drought-tolerant plants.`,
+            img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_native.png&h=0&w=1200&op=resize",
+          },
+          {
+            id: 30,
+            name: "Culinary",
+            caption: `Turn your terrace into an expansive home garden with the herbal planting package.`,
+            img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_culinary.png&h=0&w=1200&op=resize",
+          },
+        ],
       },
       {
-        title: "Outdoor Kitchen",
-        price: 10_000,
-        details:
-          "Make the most of indoor-outdoor living with this moveable outdoor kitchen. A powder-coated aluminum finish makes it durable and sleek.",
+        id: 2,
+        img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/mid_planter.png&h=0&w=1200&op=resize",
+        details: `The planters are custom-designed to match your terrace’s dimensions and material palette.`,
+      },
+      {
+        id: 3,
+        img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/irrigation.png&h=0&w=1200&op=resize",
+        details: `aa`,
       },
     ],
+  },
+  {
+    id: 2,
+    name: "Outdoor Kitchen",
+    price: 10_000,
+    slides: [
+      {
+        id: 1,
+        img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_kitchen/outdoor_kitchen_after.png&h=0&w=1200&op=resize",
+        caption: `Make the most of indoor-outdoor living with this moveable outdoor kitchen.
+        A powder-coated aluminum finish makes it durable and sleek.`,
+      },
+    ],
+  },
+];
+
+export const highDesignFeatures = [{}];
+
+export const featuresList = [
+  {
+    id: 1,
+    name: "Outdoor Living",
+    category: "outdoor",
+    icon: <FcLandscape className="icon" />,
+    subfeatures: outdoorLivingFeatures,
   },
   {
     id: 2,

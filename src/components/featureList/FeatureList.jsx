@@ -3,7 +3,7 @@ import { AiOutlineDown, AiOutlineHeart } from "react-icons/ai";
 import { featuresList } from "../../data/featuresList";
 import "./FeatureList.css";
 
-const FeatureList = () => {
+const FeatureList = ({ selected, setSelected }) => {
   return (
     <div className="features">
       <h1 className="title">What are your preferred features?</h1>
@@ -13,13 +13,20 @@ const FeatureList = () => {
       </p>
 
       {featuresList.map((feature) => {
-        return <PrimaryFeature key={feature.id} {...feature} />;
+        return (
+          <PrimaryFeature
+            key={feature.id}
+            {...feature}
+            selected={selected}
+            setIsSelected={setSelected}
+          />
+        );
       })}
     </div>
   );
 };
 
-const PrimaryFeature = ({ icon, title, features }) => {
+const PrimaryFeature = ({ icon, name, subfeatures }) => {
   const [showFeature, setShowFeature] = useState(false);
 
   return (
@@ -27,32 +34,34 @@ const PrimaryFeature = ({ icon, title, features }) => {
       <div className="fc-top" onClick={() => setShowFeature(!showFeature)}>
         <div className="fc-left">
           {icon}
-          <h4 className="feature-title">{title}</h4>
+          <h4 className="feature-title">{name}</h4>
         </div>
         <AiOutlineDown />
       </div>
 
       <div className="fc-bottom">
         {showFeature &&
-          features.map((feature) => {
-            return <SubFeature {...feature} />;
+          subfeatures.map((subfeature, index) => {
+            return <SubFeature key={index} {...subfeature} />;
           })}
       </div>
     </div>
   );
 };
 
-const SubFeature = ({ title, price }) => {
+const SubFeature = ({ name, price }) => {
   const [isSelected, setIsSelected] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
     <div
-      onClick={() => setIsSelected(!isSelected)}
+      onClick={() => {
+        setIsSelected(!isSelected);
+      }}
       className={`sub-feature ${isSelected && "selected"}`}
     >
       <div className="sb-top">
-        <h2 className="sb-title">{title}</h2>
+        <h2 className="sb-title">{name}</h2>
         <AiOutlineHeart
           className={`heart-icon ${isFavorite && "favorite"}`}
           onClick={() => setIsFavorite(!isFavorite)}

@@ -1,10 +1,6 @@
 import "./Slider.css";
 import { useState, useEffect } from "react";
-import {
-  FiChevronRight,
-  FiChevronLeft,
-  FiCloudLightning,
-} from "react-icons/fi";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Badge from "../badge/Badge";
 import Popup from "../popup/Popup";
 
@@ -42,15 +38,22 @@ const Slider = ({ design }) => {
           <figure key={id} className={`${position}`}>
             <Badge name={name} />
 
+            {/* Popups */}
             {slide.popups &&
               slide.popups.map((popup) => {
                 return (
-                  <Popup position={popup.position} title={popup.title}>
+                  <Popup
+                    ancor={popup.ancor}
+                    title={popup.title}
+                    topPosition={popup.topPosition}
+                    leftPosition={popup.leftPosition}
+                  >
                     {popup.desc}
                   </Popup>
                 );
               })}
 
+            {/* Slides */}
             <img src={image} alt="" />
             {index > 0 && (
               <button className="prev" onClick={() => setIndex(index - 1)}>
@@ -62,6 +65,8 @@ const Slider = ({ design }) => {
                 <FiChevronRight />
               </button>
             )}
+
+            {/* Caption */}
             <figcaption className="slider-caption">
               {caption}
               <div className="dot-container">
