@@ -6,50 +6,53 @@ import {
   FcPodiumWithSpeaker,
 } from "react-icons/fc";
 
+export const terraceSlides = [
+  {
+    id: 1,
+    img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_base.png&h=0&w=1200&op=resize",
+    details: `Designed to match your terrace’s dimensions and material palette, 
+          these self-watering planters come planted with one of three packages.
+           Choose Lush for a verdant, private terrace experience.`,
+    options: [
+      {
+        id: 10,
+        name: "Lush",
+        caption: `Designed to match your terrace’s dimensions and material palette, 
+            these self-watering planters come planted with one of three packages. 
+            Choose Lush for a verdant, private terrace experience.`,
+        img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_lush.png&h=0&w=1200&op=resize",
+      },
+      {
+        id: 20,
+        name: "California Native",
+        caption: `The California native package offers easy-maintenance, drought-tolerant plants.`,
+        img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_native.png&h=0&w=1200&op=resize",
+      },
+      {
+        id: 30,
+        name: "Culinary",
+        caption: `Turn your terrace into an expansive home garden with the herbal planting package.`,
+        img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_culinary.png&h=0&w=1200&op=resize",
+      },
+    ],
+  },
+  {
+    id: 2,
+    img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/mid_planter.png&h=0&w=1200&op=resize",
+    details: `The planters are custom-designed to match your terrace’s dimensions and material palette.`,
+  },
+  {
+    id: 3,
+    img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/irrigation.png&h=0&w=1200&op=resize",
+    details: `aa`,
+  },
+];
+
 export const subfeature = {
   id: 1,
   name: "Terrace Landscaping",
   price: 3_000,
-  slides: [
-    {
-      img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_base.png&h=0&w=1200&op=resize",
-      details: `Designed to match your terrace’s dimensions and material palette, 
-          these self-watering planters come planted with one of three packages.
-           Choose Lush for a verdant, private terrace experience.`,
-      options: [
-        {
-          id: 10,
-          name: "Lush",
-          caption: `Designed to match your terrace’s dimensions and material palette, 
-            these self-watering planters come planted with one of three packages. 
-            Choose Lush for a verdant, private terrace experience.`,
-          img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_lush.png&h=0&w=1200&op=resize",
-        },
-        {
-          id: 20,
-          name: "California Native",
-          caption: `The California native package offers easy-maintenance, drought-tolerant plants.`,
-          img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_native.png&h=0&w=1200&op=resize",
-        },
-        {
-          id: 30,
-          name: "Culinary",
-          caption: `Turn your terrace into an expansive home garden with the herbal planting package.`,
-          img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/end_culinary.png&h=0&w=1200&op=resize",
-        },
-      ],
-    },
-    {
-      id: 2,
-      img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/mid_planter.png&h=0&w=1200&op=resize",
-      details: `The planters are custom-designed to match your terrace’s dimensions and material palette.`,
-    },
-    {
-      id: 3,
-      img: "https://images.nabr.com/display?path=ConfigOptions/SOFA1/features/outdoor_planter/irrigation.png&h=0&w=1200&op=resize",
-      details: `Apples`,
-    },
-  ],
+  slides: terraceSlides,
 };
 
 export const outdoorLivingFeatures = [

@@ -16,7 +16,7 @@ const Features = () => {
     <div>
       <Navbar />
       <div className="main">
-        <Caroucel subfeatures={selectedFeature} />
+        <Caroucel subfeature={selectedFeature} />
         <div className="sidebar">
           <Sidebar>
             <FeatureList
