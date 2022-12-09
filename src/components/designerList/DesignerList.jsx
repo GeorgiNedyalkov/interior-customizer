@@ -2,6 +2,7 @@ import "./DesignerList.css";
 import { useState } from "react";
 import { designerList } from "../../data/data";
 import { AiOutlineHeart } from "react-icons/ai";
+import { useDesign } from "../../context/context";
 
 const DesignerList = ({ selected, setSelected }) => {
   return (
@@ -28,12 +29,15 @@ const DesignerList = ({ selected, setSelected }) => {
 export default DesignerList;
 
 const Designer = ({ id, title, img, type, design, setSelected }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+  const { contextDesign, selectedDesign } = useDesign();
+
+  console.log(contextDesign, selectedDesign);
+
   const [isSelected, setIsSelected] = useState(false);
 
   return (
     <div
-      onClick={() => {
+      onClick={(e) => {
         setIsSelected(!isSelected);
         setSelected(design);
       }}
@@ -47,10 +51,7 @@ const Designer = ({ id, title, img, type, design, setSelected }) => {
           <div className="design-type">{type.toString()}</div>
         </div>
       </div>
-      <AiOutlineHeart
-        onClick={() => setIsFavorite(!isFavorite)}
-        className={`heart-icon ${isFavorite && "favorite"}`}
-      />
+      <AiOutlineHeart className="heart-icon" />
     </div>
   );
 };

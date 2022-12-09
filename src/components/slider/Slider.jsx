@@ -1,11 +1,14 @@
 import "./Slider.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Badge from "../badge/Badge";
 import Popup from "../popup/Popup";
+import { DesignContext, useDesign } from "../../context/context";
 
 const Slider = ({ design }) => {
   const [index, setIndex] = useState(0);
+
+  const { contextDesign } = useContext(DesignContext);
 
   useEffect(() => {
     const lastIndex = design.length - 1;
@@ -40,9 +43,10 @@ const Slider = ({ design }) => {
 
             {/* Popups */}
             {slide.popups &&
-              slide.popups.map((popup) => {
+              slide.popups.map((popup, index) => {
                 return (
                   <Popup
+                    key={index}
                     ancor={popup.ancor}
                     title={popup.title}
                     topPosition={popup.topPosition}

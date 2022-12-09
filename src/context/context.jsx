@@ -1,56 +1,54 @@
 import { useContext, useReducer, createContext } from "react";
 import { terraceSlides } from "../data/featuresList";
-import { standardDesign } from "../data/data";
+import { standardDesign, bigDesign, kattyDesign } from "../data/data";
+import { useEffect } from "react";
 
 const TerraceContext = createContext(terraceSlides);
 
 export default TerraceContext;
 
-const startState = {
-  design: standardDesign,
-  isSelected: false,
-};
-// ef297b2084c679afc9e4195c0158360fde6f3684
+export const DesignContext = createContext([]);
 
-const reducerFunction = (state, action) => {
+// create a reducer function
+
+const reducer = (state, action) => {
   // eslint-disable-next-line default-case
   switch (action.type) {
-    case "selectDesign":
+    case "SET_DESIGN":
       return {
         ...state,
-        design: action.payload,
-        isSelected: !action.isSelected,
       };
   }
 };
 
-export const useDesignSource = () => {
-  const [{ design, isSelected }, dispatch] = useReducer(
-    reducerFunction,
-    startState
-  );
-
-  const setIsSelected = (design) => {
-    dispatch({
-      type: "selectDesgin",
-      payload: design,
-      isSelected: !isSelected,
-    });
-  };
-
-  return { design, isSelected, setIsSelected };
+const defaultState = {
+  contextDesign: standardDesign,
+  isSelected: false,
+  selectedDesign: null,
 };
 
-const DesignContext = createContext({});
+export function DesignContextSource() {
+  const [{ contextDesign, isSelected, selectedDesign }, dispatch] = useReducer(
+    reducer,
+    defaultState
+  );
 
-export function useDesign() {
-  return useContext(DesignContext);
+  useEffect(() => {
+    dispatch({
+      type: "SET_DESIGN",
+      payload: contextDesign,
+    });
+  }, []);
+
+  return { contextDesign, isSelected, selectedDesign };
 }
 
 export function DesignProvider({ children }) {
   return (
-    <DesignContext.Provider value={useDesignSource()}>
+    <DesignContext.Provider value={DesignContextSource()}>
       {children}
     </DesignContext.Provider>
   );
 }
+
+export const useDesign = () => useContext(DesignContext);
