@@ -5,12 +5,9 @@ import DesignerList from "../../components/designerList/DesignerList";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Button from "../../components/button/Button";
 import { Link } from "react-router-dom";
-import { standardDesign } from "../../data/data";
 import { DesignProvider } from "../../context/context";
 
 const Designer = () => {
-  const [selectedDesign, setSelectedDesign] = useState(standardDesign);
-
   return (
     <DesignProvider>
       <Navbar />
