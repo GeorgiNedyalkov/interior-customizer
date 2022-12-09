@@ -1,9 +1,9 @@
 import "./Slider.css";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Badge from "../badge/Badge";
 import Popup from "../popup/Popup";
-import { DesignContext, useDesign } from "../../context/context";
+import { useDesign } from "../../context/context";
 
 const Slider = () => {
   const [index, setIndex] = useState(0);

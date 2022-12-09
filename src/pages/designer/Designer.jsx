@@ -6,33 +6,28 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Button from "../../components/button/Button";
 import { Link } from "react-router-dom";
 import { standardDesign } from "../../data/data";
-import { DesignContext, DesignContextSource } from "../../context/context";
+import { DesignProvider } from "../../context/context";
 
 const Designer = () => {
   const [selectedDesign, setSelectedDesign] = useState(standardDesign);
 
   return (
-    <DesignContext.Provider value={DesignContextSource()}>
-      <div className="designer">
-        <Navbar />
-        <div className="main">
-          <Slider />
-          <div className="sidebar">
-            <Sidebar>
-              <DesignerList
-                selected={selectedDesign}
-                setSelected={setSelectedDesign}
-              />
-              <Button>
-                <Link to="/features" className="link">
-                  Continue
-                </Link>
-              </Button>
-            </Sidebar>
-          </div>
+    <DesignProvider>
+      <Navbar />
+      <div className="main">
+        <Slider />
+        <div className="sidebar">
+          <Sidebar>
+            <DesignerList />
+            <Button>
+              <Link to="/features" className="link">
+                Continue
+              </Link>
+            </Button>
+          </Sidebar>
         </div>
       </div>
-    </DesignContext.Provider>
+    </DesignProvider>
   );
 };
 
