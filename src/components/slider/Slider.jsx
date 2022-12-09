@@ -5,13 +5,12 @@ import Badge from "../badge/Badge";
 import Popup from "../popup/Popup";
 import { DesignContext, useDesign } from "../../context/context";
 
-const Slider = ({ design }) => {
+const Slider = () => {
   const [index, setIndex] = useState(0);
-
-  const { contextDesign } = useContext(DesignContext);
+  const { contextDesign } = useDesign();
 
   useEffect(() => {
-    const lastIndex = design.length - 1;
+    const lastIndex = contextDesign.length - 1;
 
     if (index < 0) {
       setIndex(lastIndex);
@@ -23,7 +22,7 @@ const Slider = ({ design }) => {
 
   return (
     <div className="slider">
-      {design.map((slide, slideIndex) => {
+      {contextDesign.map((slide, slideIndex) => {
         const { id, image, caption, name } = slide;
 
         let position = "nextSlide";
@@ -32,7 +31,7 @@ const Slider = ({ design }) => {
         }
         if (
           slideIndex === index - 1 ||
-          (index === 0 && slideIndex === design.length - 1)
+          (index === 0 && slideIndex === contextDesign.length - 1)
         ) {
           position = "lastSlide";
         }
@@ -64,7 +63,7 @@ const Slider = ({ design }) => {
                 <FiChevronLeft />
               </button>
             )}
-            {index !== design.length - 1 && (
+            {index !== contextDesign.length - 1 && (
               <button className="next" onClick={() => setIndex(index + 1)}>
                 <FiChevronRight />
               </button>
@@ -74,7 +73,7 @@ const Slider = ({ design }) => {
             <figcaption className="slider-caption">
               {caption}
               <div className="dot-container">
-                {design.map((s, slideIndex) => {
+                {contextDesign.map((s, slideIndex) => {
                   return (
                     <div
                       key={slideIndex}

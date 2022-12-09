@@ -1,6 +1,6 @@
 import { useContext, useReducer, createContext } from "react";
 import { terraceSlides } from "../data/featuresList";
-import { standardDesign, bigDesign, kattyDesign } from "../data/data";
+import { standardDesign } from "../data/data";
 import { useEffect } from "react";
 
 const TerraceContext = createContext(terraceSlides);
@@ -18,17 +18,22 @@ const reducer = (state, action) => {
       return {
         ...state,
       };
+    case "SELECT_DESIGN":
+      return {
+        ...state,
+        contextDesign: action.payload,
+        isSelected: !action.isSelected,
+      };
   }
 };
 
 const defaultState = {
   contextDesign: standardDesign,
-  isSelected: false,
-  selectedDesign: null,
+  isSelected: true,
 };
 
 export function DesignContextSource() {
-  const [{ contextDesign, isSelected, selectedDesign }, dispatch] = useReducer(
+  const [{ contextDesign, isSelected }, dispatch] = useReducer(
     reducer,
     defaultState
   );
@@ -40,7 +45,15 @@ export function DesignContextSource() {
     });
   }, []);
 
-  return { contextDesign, isSelected, selectedDesign };
+  const selectDesign = (design) => {
+    dispatch({
+      type: "SELECT_DESIGN",
+      payload: design,
+      isSelected: !design.isSelected,
+    });
+  };
+
+  return { contextDesign, isSelected, selectDesign };
 }
 
 export function DesignProvider({ children }) {

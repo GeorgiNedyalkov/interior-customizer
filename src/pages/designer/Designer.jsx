@@ -16,7 +16,7 @@ const Designer = () => {
       <div className="designer">
         <Navbar />
         <div className="main">
-          <Slider design={selectedDesign} />
+          <Slider />
           <div className="sidebar">
             <Sidebar>
               <DesignerList

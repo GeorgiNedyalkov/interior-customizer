@@ -1,10 +1,9 @@
 import "./DesignerList.css";
-import { useState } from "react";
 import { designerList } from "../../data/data";
 import { AiOutlineHeart } from "react-icons/ai";
 import { useDesign } from "../../context/context";
 
-const DesignerList = ({ selected, setSelected }) => {
+const DesignerList = () => {
   return (
     <>
       <h1 className="title">Who is your preferred designer?</h1>
@@ -15,12 +14,7 @@ const DesignerList = ({ selected, setSelected }) => {
       </p>
 
       {designerList.map((designer) => (
-        <Designer
-          key={designer.id}
-          {...designer}
-          selected={selected}
-          setSelected={setSelected}
-        />
+        <Designer key={designer.id} {...designer} />
       ))}
     </>
   );
@@ -28,18 +22,13 @@ const DesignerList = ({ selected, setSelected }) => {
 
 export default DesignerList;
 
-const Designer = ({ id, title, img, type, design, setSelected }) => {
-  const { contextDesign, selectedDesign } = useDesign();
-
-  console.log(contextDesign, selectedDesign);
-
-  const [isSelected, setIsSelected] = useState(false);
+const Designer = ({ id, title, img, type, design }) => {
+  const { selectDesign, isSelected } = useDesign();
 
   return (
     <div
-      onClick={(e) => {
-        setIsSelected(!isSelected);
-        setSelected(design);
+      onClick={() => {
+        selectDesign(design);
       }}
       className={`designer-section ${isSelected && "selected"}`}
       key={id}
