@@ -22,6 +22,7 @@ const FeatureList = () => {
 
 const PrimaryFeature = ({ icon, name, subfeatures }) => {
   const [showFeature, setShowFeature] = useState(false);
+  console.log(subfeatures);
 
   return (
     <div className="feature-section">
