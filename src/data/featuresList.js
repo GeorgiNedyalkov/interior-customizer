@@ -37,47 +37,6 @@ import luxShades from "../assets/lux_shades.png";
 import luxCloset1 from "../assets/lux_closet_1.png";
 import luxCloset2 from "../assets/lux_closet_2.png";
 
-export const terraceSlides = [
-  {
-    id: 1,
-    img: terraceBasic,
-    details: `Designed to match your terrace’s dimensions and material palette, 
-          these self-watering planters come planted with one of three packages.
-           Choose Lush for a verdant, private terrace experience.`,
-    options: [
-      {
-        id: 10,
-        name: "Lush",
-        img: terraceLush,
-        caption: `Designed to match your terrace’s dimensions and material palette, 
-            these self-watering planters come planted with one of three packages. 
-            Choose Lush for a verdant, private terrace experience.`,
-      },
-      {
-        id: 20,
-        name: "California Native",
-        img: terraceCalifornia,
-        caption: `The California native package offers easy-maintenance, drought-tolerant plants.`,
-      },
-      {
-        id: 30,
-        name: "Culinary",
-        img: terraceCulinary,
-        caption: `Turn your terrace into an expansive home garden with the herbal planting package.`,
-      },
-    ],
-  },
-  {
-    id: 2,
-    img: terracePlanters,
-    details: `The planters are custom-designed to match your terrace’s dimensions and material palette.`,
-  },
-  {
-    id: 3,
-    img: terraceWateringSystem,
-  },
-];
-
 export const outdoorLivingFeatures = [
   {
     id: 1,

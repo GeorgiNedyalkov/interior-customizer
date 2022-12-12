@@ -1,8 +1,8 @@
 import { useEffect, useContext, useReducer, createContext } from "react";
-import { terraceSlides } from "../data/featuresList";
+import { outdoorLivingFeatures } from "../data/featuresList";
 
 const initialState = {
-  featuresContext: terraceSlides,
+  featuresContext: outdoorLivingFeatures[0],
   isSelected: false,
 };
 
