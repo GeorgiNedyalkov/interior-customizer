@@ -1,17 +1,14 @@
-import { useContext, useReducer, createContext } from "react";
-import { terraceSlides } from "../data/featuresList";
+import { useEffect, useContext, useReducer, createContext } from "react";
 import { standardDesign } from "../data/data";
-import { useEffect } from "react";
 
-const TerraceContext = createContext(terraceSlides);
-
-export default TerraceContext;
+const defaultState = {
+  contextDesign: standardDesign,
+  isSelected: false,
+};
 
 export const DesignContext = createContext([]);
 
-// create a reducer function
-
-const reducer = (state, action) => {
+const designReducer = (state, action) => {
   // eslint-disable-next-line default-case
   switch (action.type) {
     case "SET_DESIGN":
@@ -22,19 +19,13 @@ const reducer = (state, action) => {
       return {
         ...state,
         contextDesign: action.payload,
-        isSelected: !action.isSelected,
       };
   }
 };
 
-const defaultState = {
-  contextDesign: standardDesign,
-  isSelected: true,
-};
-
 export function DesignContextSource() {
   const [{ contextDesign, isSelected }, dispatch] = useReducer(
-    reducer,
+    designReducer,
     defaultState
   );
 
@@ -49,7 +40,7 @@ export function DesignContextSource() {
     dispatch({
       type: "SELECT_DESIGN",
       payload: design,
-      isSelected: !design.isSelected,
+      isSelected: design.isSelected,
     });
   };
 

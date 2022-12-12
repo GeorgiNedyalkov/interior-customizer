@@ -1,16 +1,16 @@
 import "./Caroucel.css";
 import { useState, useEffect } from "react";
-import { FcCdLogo } from "react-icons/fc";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Badge from "../badge/Badge";
-import { terraceSlides } from "../../data/featuresList";
+import { useFeature } from "../../context/featureContext";
 
-const Caroucel = ({ subfeature }) => {
-  const [subSlides, setSubslides] = useState(terraceSlides);
+const Caroucel = () => {
+  const { featuresContext } = useFeature();
+  console.log(featuresContext);
 
   return (
     <div className="slider">
-      <Slide slides={terraceSlides} />;
+      <Slide slides={featuresContext} />;
     </div>
   );
 };
@@ -18,6 +18,7 @@ const Caroucel = ({ subfeature }) => {
 const Slide = ({ slides, name }) => {
   const [index, setIndex] = useState(0);
   const [slideImage, setSlideImage] = useState("");
+  const [slideCaption, setSlideCaption] = useState("");
 
   useEffect(() => {
     const lastIndex = slides.length - 1;
@@ -69,7 +70,7 @@ const Slide = ({ slides, name }) => {
             )}
 
             <figcaption className="slider-caption">
-              {details}
+              {slideCaption ? slideCaption : details}
 
               {options && (
                 <div className="options">
@@ -78,6 +79,7 @@ const Slide = ({ slides, name }) => {
                       className="option-btn"
                       onClick={() => {
                         setSlideImage(option.img);
+                        setSlideCaption(option.caption);
                       }}
                     >
                       {option.name}
@@ -87,17 +89,18 @@ const Slide = ({ slides, name }) => {
               )}
 
               <div className="dot-container">
-                {slides.map((s, slideIndex) => {
-                  return (
-                    <div
-                      key={slideIndex}
-                      className="dot"
-                      onClick={() => setIndex(slideIndex)}
-                    >
-                      &#8226;
-                    </div>
-                  );
-                })}
+                {slides.length > 1 &&
+                  slides.map((s, slideIndex) => {
+                    return (
+                      <div
+                        key={slideIndex}
+                        className="dot"
+                        onClick={() => setIndex(slideIndex)}
+                      >
+                        &#8226;
+                      </div>
+                    );
+                  })}
               </div>
             </figcaption>
           </figure>

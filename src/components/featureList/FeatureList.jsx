@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { AiOutlineDown, AiOutlineHeart } from "react-icons/ai";
+import { useFeature } from "../../context/featureContext";
 import { featuresList } from "../../data/featuresList";
 import "./FeatureList.css";
 
-const FeatureList = ({ selected, setSelected }) => {
+const FeatureList = () => {
   return (
     <div className="features">
       <h1 className="title">What are your preferred features?</h1>
@@ -13,14 +14,7 @@ const FeatureList = ({ selected, setSelected }) => {
       </p>
 
       {featuresList.map((feature) => {
-        return (
-          <PrimaryFeature
-            key={feature.id}
-            {...feature}
-            selected={selected}
-            setIsSelected={setSelected}
-          />
-        );
+        return <PrimaryFeature key={feature.id} {...feature} />;
       })}
     </div>
   );
@@ -49,14 +43,17 @@ const PrimaryFeature = ({ icon, name, subfeatures }) => {
   );
 };
 
-const SubFeature = ({ name, price }) => {
+const SubFeature = ({ name, price, slides }) => {
   const [isSelected, setIsSelected] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
+
+  const { selectFeature } = useFeature();
 
   return (
     <div
       onClick={() => {
         setIsSelected(!isSelected);
+        selectFeature(slides);
       }}
       className={`sub-feature ${isSelected && "selected"}`}
     >
