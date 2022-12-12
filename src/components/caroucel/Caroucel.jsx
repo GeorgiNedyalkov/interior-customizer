@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Badge from "../badge/Badge";
 import { useFeature } from "../../context/featureContext";
+import Popup from "../popup/Popup";
 
 const Caroucel = () => {
   const { featuresContext } = useFeature();
@@ -49,6 +50,21 @@ const Slide = ({ slides, name }) => {
         return (
           <figure key={id} className={position}>
             <Badge name={name} />
+
+            {s.popups &&
+              s.popups.map((popup, index) => {
+                return (
+                  <Popup
+                    key={index}
+                    ancor={popup.ancor}
+                    title={popup.title}
+                    topPosition={popup.topPosition}
+                    leftPosition={popup.leftPosition}
+                  >
+                    {popup.desc}
+                  </Popup>
+                );
+              })}
 
             {slideImage ? (
               <img src={slideImage} alt="" />

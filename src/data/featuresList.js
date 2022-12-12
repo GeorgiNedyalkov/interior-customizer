@@ -37,47 +37,6 @@ import luxShades from "../assets/lux_shades.png";
 import luxCloset1 from "../assets/lux_closet_1.png";
 import luxCloset2 from "../assets/lux_closet_2.png";
 
-export const terraceSlides = [
-  {
-    id: 1,
-    img: terraceBasic,
-    details: `Designed to match your terrace’s dimensions and material palette, 
-          these self-watering planters come planted with one of three packages.
-           Choose Lush for a verdant, private terrace experience.`,
-    options: [
-      {
-        id: 10,
-        name: "Lush",
-        img: terraceLush,
-        caption: `Designed to match your terrace’s dimensions and material palette, 
-            these self-watering planters come planted with one of three packages. 
-            Choose Lush for a verdant, private terrace experience.`,
-      },
-      {
-        id: 20,
-        name: "California Native",
-        img: terraceCalifornia,
-        caption: `The California native package offers easy-maintenance, drought-tolerant plants.`,
-      },
-      {
-        id: 30,
-        name: "Culinary",
-        img: terraceCulinary,
-        caption: `Turn your terrace into an expansive home garden with the herbal planting package.`,
-      },
-    ],
-  },
-  {
-    id: 2,
-    img: terracePlanters,
-    details: `The planters are custom-designed to match your terrace’s dimensions and material palette.`,
-  },
-  {
-    id: 3,
-    img: terraceWateringSystem,
-  },
-];
-
 export const outdoorLivingFeatures = [
   {
     id: 1,
@@ -121,6 +80,25 @@ export const outdoorLivingFeatures = [
       {
         id: 3,
         img: terraceWateringSystem,
+        popups: [
+          {
+            title: "Self-Watering System",
+            topPosition: "38vh",
+            leftPosition: "24vw",
+            ancor: "bottom-right",
+            desc: `The self-watering irrigation system makes plant maintenance a breeze. 
+            The concealed hose autoand efficiently dispenses just enough water each day. 
+            You can monitor water use via your Nabr app, too.`,
+          },
+          {
+            title: "Deep Growth Medium",
+            topPosition: "60vh",
+            leftPosition: "36vw",
+            ancor: "top-right",
+            desc: `Nabr’s planters are uniquely deep - in many cases, over three feet - 
+            which allows you to grow plants that a run-of-the-mill pot simply can’t support.`,
+          },
+        ],
       },
     ],
   },
@@ -134,6 +112,39 @@ export const outdoorLivingFeatures = [
         img: terraceKitchen,
         details: `Make the most of indoor-outdoor living with this moveable outdoor kitchen.
         A powder-coated aluminum finish makes it durable and sleek.`,
+        popups: [
+          {
+            title: "State-Of-The-Art Grill",
+            topPosition: "38vh",
+            leftPosition: "26vw",
+            ancor: "bottom-right",
+            desc: `The electric grill isn’t just more sustainable than a gas alternative; 
+            it’s also flare-up and smoke free with a lid that’s never hot to the touch.`,
+          },
+          {
+            title: "Concealed wheels",
+            topPosition: "70vh",
+            leftPosition: "26vw",
+            ancor: "top-right",
+            desc: `The unit fits the dimensions of your terrace neatly — 
+            and has concealed wheels for easy movement and cleaning.`,
+          },
+          {
+            title: "Refrigerator + Storage",
+            topPosition: "58vh",
+            leftPosition: "38vw",
+            ancor: "bottom-right",
+            desc: `A fridge, pull-out trash, utensil drawer, and cabinets come in thick-gauge, 
+            marine-grade aluminum with a durable powder-coated finish.`,
+          },
+          {
+            title: "Solar-Powered Lighting",
+            topPosition: "44vh",
+            leftPosition: "49vw",
+            ancor: "top-right",
+            desc: `Dekton quartz countertops and solar-powered lighting makes food prep easy — day or night.`,
+          },
+        ],
       },
     ],
   },
@@ -276,6 +287,38 @@ export const enterntainmentFeatures = [
         img: eeKitchen,
         details: `Level up your kitchen with this package of professional-grade, 
     stainless steel appliances from Miele.`,
+        popups: [
+          {
+            title: "Spacious Refrigerator",
+            topPosition: "29vh",
+            leftPosition: "15vw",
+            ancor: "bottom-right",
+            desc: `Stainless steel fridge and freezer includes more shelves and bigger capacity.`,
+          },
+          {
+            title: "Instant Hot Water",
+            topPosition: "48vh",
+            leftPosition: "30vw",
+            ancor: "top-right",
+            desc: `This mini-faucet dispenses purified hot water in an instant.`,
+          },
+          {
+            title: "Eco-Friendly Dishwasher",
+            topPosition: "62vh",
+            leftPosition: "30vw",
+            ancor: "bottom-right",
+            desc: `This dishwasher comes with many additional eco-friendly features, 
+            including an economy program that reduces water use by 25%.`,
+          },
+          {
+            title: "Smart Oven",
+            topPosition: "62vh",
+            leftPosition: "53vw",
+            ancor: "top-right",
+            desc: `This oven’s camera is a game-changer. 
+            Check your roast from your phone, without ever opening the oven door.`,
+          },
+        ],
       },
     ],
   },
@@ -376,6 +419,23 @@ export const luxuryFeatures = [
         img: luxShades,
         details: `Optimize your life with these automatic shades that come pre-installed in every room — 
             ready on move-in.`,
+        popups: [
+          {
+            title: "Fabrics",
+            topPosition: "37vh",
+            leftPosition: "33vw",
+            ancor: "bottom-right",
+            desc: `Put fabrics where you want them, like blackouts in the bedroom 
+            or solar shades in the living room.`,
+          },
+          {
+            title: "Energy Savings",
+            topPosition: "63vh",
+            leftPosition: "30vw",
+            ancor: "top-right",
+            desc: `Automatic timed settings prevent unnecessary solar heat gains and save you energy.`,
+          },
+        ],
       },
     ],
   },
