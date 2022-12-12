@@ -20,6 +20,11 @@ const Features = () => {
           <Caroucel />
           <div className="sidebar">
             <Sidebar>
+              <h1 className="title">What are your preferred features?</h1>
+              <p className="description">
+                After you’ve made a reservation, one of our Design Advisors will
+                be in touch to help you finalize your selections.
+              </p>
               <FeatureList
                 selected={selectedFeature}
                 setSelected={setSelectedFeature}

@@ -6,13 +6,6 @@ import { useDesign } from "../../context/context";
 const DesignerList = () => {
   return (
     <>
-      <h1 className="title">Who is your preferred designer?</h1>
-      <p className="description">
-        Choose Nabr’s design, which you can make your own with custom features,
-        or premium packages from world-class designers. Furnishings not
-        included.
-      </p>
-
       {designerList.map((designer) => (
         <Designer key={designer.id} {...designer} />
       ))}

@@ -4,7 +4,6 @@ import { addOns } from "../../data/data";
 const AddOnList = () => {
   return (
     <div className="sidebar-bottom">
-      <h1 className="title">Do you need parking or storage?</h1>
       <div className="features">
         {addOns.map(({ title, price, icon }) => {
           return (

@@ -1,22 +1,21 @@
-import Sidebar from "../../components/sidebar/Sidebar";
+import "./Size.css";
 import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
 import HomeList from "../../components/homeList/HomeList";
 import Button from "../../components/button/Button";
 import { Link } from "react-router-dom";
-import "./Size.css";
+import { HeroImage } from "../../components/heroImage/HeroImage";
 
 const Size = () => {
   return (
     <div className="size">
       <Navbar />
       <div className="main">
-        <img
-          className="slider"
-          src="https://images.nabr.com/display?path=ConfigOptions/SOFA1/design_studio_default_carousel_image.webp&h=0&w=1200&op=resize"
-          alt=""
-        />
+        <HeroImage />
         <div className="sidebar">
           <Sidebar>
+            <h1 className="title">What size home are you looking for?</h1>
+            <p className="description">Select all that apply.</p>
             <HomeList />
             <Button>
               <Link to="/designer" className="link">

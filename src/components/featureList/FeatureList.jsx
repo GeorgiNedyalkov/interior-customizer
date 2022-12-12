@@ -7,12 +7,6 @@ import "./FeatureList.css";
 const FeatureList = () => {
   return (
     <div className="features">
-      <h1 className="title">What are your preferred features?</h1>
-      <p className="description">
-        After you’ve made a reservation, one of our Design Advisors will be in
-        touch to help you finalize your selections.
-      </p>
-
       {featuresList.map((feature) => {
         return <PrimaryFeature key={feature.id} {...feature} />;
       })}

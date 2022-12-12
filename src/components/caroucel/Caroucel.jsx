@@ -6,7 +6,6 @@ import { useFeature } from "../../context/featureContext";
 
 const Caroucel = () => {
   const { featuresContext } = useFeature();
-  console.log(featuresContext);
 
   return (
     <div className="slider">

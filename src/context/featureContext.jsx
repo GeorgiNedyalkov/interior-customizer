@@ -2,7 +2,7 @@ import { useEffect, useContext, useReducer, createContext } from "react";
 import { outdoorLivingFeatures } from "../data/featuresList";
 
 const initialState = {
-  featuresContext: outdoorLivingFeatures[0],
+  featuresContext: outdoorLivingFeatures[0].slides,
   isSelected: false,
 };
 

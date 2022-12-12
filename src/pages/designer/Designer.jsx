@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Slider from "../../components/slider/Slider";
 import DesignerList from "../../components/designerList/DesignerList";
@@ -15,6 +14,12 @@ const Designer = () => {
         <Slider />
         <div className="sidebar">
           <Sidebar>
+            <h1 className="title">Who is your preferred designer?</h1>
+            <p className="description">
+              Choose Nabr’s design, which you can make your own with custom
+              features, or premium packages from world-class designers.
+              Furnishings not included.
+            </p>
             <DesignerList />
             <Button>
               <Link to="/features" className="link">
