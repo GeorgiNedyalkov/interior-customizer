@@ -34,7 +34,7 @@ export function FeaturesContextSource() {
       type: "SET_FEATURE",
       payload: featuresContext,
     });
-  }, []);
+  }, [featuresContext]);
 
   const selectFeature = (feature) => {
     dispatch({
