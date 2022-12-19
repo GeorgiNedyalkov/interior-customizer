@@ -66,19 +66,19 @@ a {
 }
 
 .icon {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .heart-icon {
-    font-size: 2.5rem;
-    cursor: pointer;
-    color: var(--green-color);
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--green-color);
 }
 
 .heart-icon:hover {
-    color: green;
+  color: green;
 }
 
 .favorite {
-    color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
 }

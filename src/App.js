@@ -4,6 +4,7 @@ import Features from "./pages/features/Features";
 import AddOns from "./pages/add-ons/AddOns";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
+import Error from "./pages/error/Error";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/features" element={<Features />} />
             <Route path="/addons" element={<AddOns />} />
             <Route path="/login" element={<Login />} />
+            <Route path="*" element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>
