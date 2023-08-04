@@ -9,23 +9,23 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route index element={<Size />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/designer" element={<Designer />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/addons" element={<AddOns />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="*" element={<Error />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className="app">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/">
+                        <Route index element={<Dashboard />} />
+                        <Route path="/size" element={<Size />} />
+                        <Route path="/designer" element={<Designer />} />
+                        <Route path="/features" element={<Features />} />
+                        <Route path="/addons" element={<AddOns />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="*" element={<Error />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
