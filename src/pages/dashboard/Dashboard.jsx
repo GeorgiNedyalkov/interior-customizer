@@ -1,8 +1,8 @@
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
 import Button from "../../components/button/Button";
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Dashboard = () => {
     return (
