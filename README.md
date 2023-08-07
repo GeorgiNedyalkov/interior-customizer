@@ -2,7 +2,7 @@
 
 A website that helps home buyers customise their dream home.
 
-## Introduction
+## 🌟 About
 
 Interior customizer is a template project that similates a Real Estate Development company who sells their apartments
 with several options and features which you can add to your home.
@@ -12,7 +12,7 @@ property features in several categories, and opts-in to add either a parking spa
 
 Finally the client get's a receipt for their order.
 
-## Getting Started
+## 🏁 Getting Started
 
 Here is a guideline to run the project.
 
@@ -42,13 +42,13 @@ npm start
 
 The project should be running locally on http://localhost:3000/
 
-## Technology
+## 🔨 Build with
 
 -   [React](https://react.dev/)
 -   [React Router](https://reactrouter.com/en/main)
 -   [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-## Bugs
+## 🐜 Bugs
 
 -   Designer page: Desginers with different length of images break the caroucel.
 
@@ -60,10 +60,10 @@ Choosing a different feature starts does not start the caroucel with the first i
 You can select multiple features and then unselect them but the behavior should be a radio button type.
 Features with one image should not have any buttons.
 
-## Test
+## 🔧 Test
 
 Add tests
 
-## Author
+## ✍ Author
 
 -   [Georgi Nedyalkov](https://www.georginedyalkov.com)
