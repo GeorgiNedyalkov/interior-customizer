@@ -5,25 +5,23 @@ import AddOns from "./pages/add-ons/AddOns";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
 import Error from "./pages/error/Error";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
     return (
         <div className="app">
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/">
-                        <Route index element={<Dashboard />} />
-                        <Route path="/size" element={<Size />} />
-                        <Route path="/designer" element={<Designer />} />
-                        <Route path="/features" element={<Features />} />
-                        <Route path="/addons" element={<AddOns />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="*" element={<Error />} />
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+            <Routes>
+                <Route path="/">
+                    <Route index element={<Dashboard />} />
+                    <Route path="/size" element={<Size />} />
+                    <Route path="/designer" element={<Designer />} />
+                    <Route path="/features" element={<Features />} />
+                    <Route path="/addons" element={<AddOns />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="*" element={<Error />} />
+                </Route>
+            </Routes>
         </div>
     );
 }
