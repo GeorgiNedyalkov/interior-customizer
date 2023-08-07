@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import AddOnList from "../../components/AddOnList/AddOnList";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import Button from "../../components/button/Button";
+import Button from "../../components/Button/Button";
 import { HeroImage } from "../../components/HeroImage/HeroImage";
 
 const AddOns = () => {

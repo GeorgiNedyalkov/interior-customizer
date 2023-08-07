@@ -2,7 +2,7 @@ import "./Size.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import HomeList from "../../components/HomeList/HomeList";
-import Button from "../../components/button/Button";
+import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import { HeroImage } from "../../components/HeroImage/HeroImage";
 

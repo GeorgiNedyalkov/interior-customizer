@@ -1,9 +1,9 @@
-import "./Caroucel.css";
 import { useState, useEffect } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import Badge from "../badge/Badge";
 import { useFeature } from "../../context/featureContext";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Badge from "../Badge/Badge";
 import Popup from "../Popup/Popup";
+import "./Caroucel.css";
 
 const Caroucel = () => {
     const { featuresContext } = useFeature();

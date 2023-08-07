@@ -1,6 +1,6 @@
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
-import Button from "../../components/button/Button";
+import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
