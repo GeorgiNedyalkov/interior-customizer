@@ -30,7 +30,7 @@ const Slide = ({ slides, name }) => {
         if (index > lastIndex) {
             setIndex(0);
         }
-    }, [index]);
+    }, [index, slides]);
 
     return (
         <>
@@ -100,6 +100,7 @@ const Slide = ({ slides, name }) => {
                                 <div className="options">
                                     {options.map((option, optionIndex) => (
                                         <button
+                                            key={option}
                                             className="option-btn"
                                             onClick={() => {
                                                 setSlideImage(option.img);

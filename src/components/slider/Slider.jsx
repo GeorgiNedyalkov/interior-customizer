@@ -15,10 +15,10 @@ const Slider = () => {
         if (index < 0) {
             setIndex(lastIndex);
         }
-        if (index > lastIndex) {
+        if (index >= lastIndex) {
             setIndex(0);
         }
-    }, [index]);
+    }, [index, contextDesign]);
 
     return (
         <div className="slider">
