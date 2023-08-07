@@ -1,8 +1,25 @@
-# Interior Customisor
+</p>
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+</p>
 
-A website that helps home buyers customise their dream home.
+<h3 align="center">Interior Customiser</h3>
 
-## 🌟 About
+---
+
+<p align="center"> A website that helps home buyers customise their dream home.
+    <br> 
+</p>
+
+## 📝 Table of Contents
+
+-   [About](#about)
+-   [Getting started](#getting_started)
+-   [Build with](#about)
+-   [Author](#author)
+
+## 🌟 About <a name="about"></a>
 
 Interior customizer is a template project that similates a Real Estate Development company who sells their apartments
 with several options and features which you can add to your home.
@@ -12,7 +29,7 @@ property features in several categories, and opts-in to add either a parking spa
 
 Finally the client get's a receipt for their order.
 
-## 🏁 Getting Started
+## 🏁 Getting Started <a name="getting_started"></a>
 
 Here is a guideline to run the project.
 
@@ -64,6 +81,6 @@ Features with one image should not have any buttons.
 
 Add tests
 
-## ✍ Author
+## ✍ Author <a name="author"></a>
 
 -   [Georgi Nedyalkov](https://www.georginedyalkov.com)
