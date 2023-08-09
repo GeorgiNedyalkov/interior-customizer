@@ -6,20 +6,19 @@ import { useDesign } from "../../context/designContext";
 import "./Slider.css";
 
 const Slider = () => {
-    const { contextDesign } = useDesign();
-    const [index, setIndex] = useState(0);
+    const { contextDesign, sIndex, dispatch } = useDesign();
 
     useEffect(() => {
         const lastIndex = contextDesign.length - 1;
 
-        if (index < 0) {
-            setIndex(lastIndex);
+        if (sIndex < 0) {
+            dispatch({ type: "SET_SLIDE_INDEX", payload: lastIndex });
         }
 
-        if (index > lastIndex) {
-            setIndex(0);
+        if (sIndex > lastIndex) {
+            dispatch({ type: "SET_SLIDE_INDEX", payload: 0 });
         }
-    }, [index, contextDesign]);
+    }, [sIndex, contextDesign, dispatch]);
 
     return (
         <div className="slider">
@@ -27,12 +26,12 @@ const Slider = () => {
                 const { id, image, caption, name } = slide;
 
                 let position = "nextSlide";
-                if (slideIndex === index) {
+                if (slideIndex === sIndex) {
                     position = "activeSlide";
                 }
                 if (
-                    slideIndex === index - 1 ||
-                    (index === 0 && slideIndex === contextDesign.length - 1)
+                    slideIndex === sIndex - 1 ||
+                    (sIndex === 0 && slideIndex === contextDesign.length - 1)
                 ) {
                     position = "lastSlide";
                 }
@@ -60,18 +59,28 @@ const Slider = () => {
 
                         {/* Slides */}
                         <img src={image} alt="" />
-                        {index > 0 && (
+                        {sIndex > 0 && (
                             <button
                                 className="prev"
-                                onClick={() => setIndex(index - 1)}
+                                onClick={() =>
+                                    dispatch({
+                                        type: "SET_SLIDE_INDEX",
+                                        payload: sIndex - 1,
+                                    })
+                                }
                             >
                                 <FiChevronLeft />
                             </button>
                         )}
-                        {index !== contextDesign.length - 1 && (
+                        {sIndex !== contextDesign.length - 1 && (
                             <button
                                 className="next"
-                                onClick={() => setIndex(index + 1)}
+                                onClick={() =>
+                                    dispatch({
+                                        type: "SET_SLIDE_INDEX",
+                                        payload: sIndex + 1,
+                                    })
+                                }
                             >
                                 <FiChevronRight />
                             </button>
@@ -80,7 +89,7 @@ const Slider = () => {
                         {/* Caption */}
                         <figcaption className="slider-caption">
                             {caption}
-                            <Dots setIndex={setIndex} />
+                            <Dots />
                         </figcaption>
                     </figure>
                 );
@@ -91,8 +100,8 @@ const Slider = () => {
 
 export default Slider;
 
-const Dots = ({ setIndex }) => {
-    const { contextDesign } = useDesign();
+const Dots = () => {
+    const { contextDesign, dispatch } = useDesign();
     return (
         <div className="dot-container">
             {contextDesign.map((s, slideIndex) => {
@@ -100,7 +109,12 @@ const Dots = ({ setIndex }) => {
                     <div
                         key={slideIndex}
                         className="dot"
-                        onClick={() => setIndex(slideIndex)}
+                        onClick={() =>
+                            dispatch({
+                                type: "SET_SLIDE_INDEX",
+                                payload: slideIndex++,
+                            })
+                        }
                     >
                         &#8226;
                     </div>

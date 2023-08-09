@@ -4,6 +4,7 @@ import { standardDesign } from "../data/data";
 const defaultState = {
     contextDesign: standardDesign,
     isSelected: false,
+    sIndex: 0,
 };
 
 export const DesignContext = createContext([]);
@@ -19,12 +20,19 @@ const designReducer = (state, action) => {
             return {
                 ...state,
                 contextDesign: action.payload,
+                sIndex: 0,
+            };
+
+        case "SET_SLIDE_INDEX":
+            return {
+                ...state,
+                sIndex: action.payload,
             };
     }
 };
 
 export function DesignContextSource() {
-    const [{ contextDesign, isSelected }, dispatch] = useReducer(
+    const [{ contextDesign, isSelected, sIndex }, dispatch] = useReducer(
         designReducer,
         defaultState
     );
@@ -41,10 +49,17 @@ export function DesignContextSource() {
             type: "SELECT_DESIGN",
             payload: design,
             isSelected: design.isSelected,
+            sIndex: 0,
         });
     };
 
-    return { contextDesign, isSelected, selectDesign };
+    return {
+        contextDesign,
+        isSelected,
+        sIndex,
+        selectDesign,
+        dispatch,
+    };
 }
 
 export function DesignProvider({ children }) {
