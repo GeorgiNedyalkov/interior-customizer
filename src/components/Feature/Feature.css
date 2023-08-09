@@ -1,0 +1,38 @@
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px 0px;
+    padding: 40px;
+    height: 100px;
+    cursor: pointer;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.feature:hover {
+    box-shadow: var(--shadow);
+}
+
+.feature-left {
+    display: flex;
+    gap: 30px;
+}
+
+.feature-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature-title {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.feature-price {
+    color: var(--text-color);
+    font-weight: 300;
+}
+

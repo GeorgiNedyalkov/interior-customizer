@@ -1,0 +1,19 @@
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  gap: 40px;
+}
+
+.categories > a {
+  cursor: pointer;
+  color: var(--category-color);
+  font-size: 1rem;
+}
+
+.active {
+  border-bottom: 2px solid black;
+}
