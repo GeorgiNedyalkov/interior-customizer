@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Slider from "../../components/Slider/Slider";
 import DesignerList from "../../components/DesignerList/DesignerList";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Button from "../../components/Button/Button";
-import { Link } from "react-router-dom";
-import { DesignProvider } from "../../context/context";
+import { DesignProvider } from "../../context/designContext";
 
 const Designer = () => {
     return (

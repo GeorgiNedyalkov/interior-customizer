@@ -1,15 +1,15 @@
 import "./DesignerList.css";
 import { designerList } from "../../data/data";
 import { AiOutlineHeart } from "react-icons/ai";
-import { useDesign } from "../../context/context";
+import { useDesign } from "../../context/designContext";
 
 const DesignerList = () => {
     return (
-        <>
+        <ul>
             {designerList.map((designer) => (
                 <Designer key={designer.id} {...designer} />
             ))}
-        </>
+        </ul>
     );
 };
 

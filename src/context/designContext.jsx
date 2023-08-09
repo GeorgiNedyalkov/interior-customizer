@@ -34,7 +34,7 @@ export function DesignContextSource() {
             type: "SET_DESIGN",
             payload: contextDesign,
         });
-    }, []);
+    }, [contextDesign]);
 
     const selectDesign = (design) => {
         dispatch({
