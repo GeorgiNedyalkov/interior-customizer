@@ -47,6 +47,13 @@ const SubFeature = ({ name, price, slides }) => {
 
     const { selectFeature } = useFeature();
 
+    const heartIcon = (
+        <AiOutlineHeart
+            className={`heart-icon ${isFavorite && "favorite"}`}
+            onClick={() => setIsFavorite(!isFavorite)}
+        />
+    );
+
     return (
         <div
             onClick={() => {
@@ -57,13 +64,12 @@ const SubFeature = ({ name, price, slides }) => {
         >
             <div className="sb-top">
                 <h2 className="sb-title">{name}</h2>
-                <AiOutlineHeart
-                    className={`heart-icon ${isFavorite && "favorite"}`}
-                    onClick={() => setIsFavorite(!isFavorite)}
-                />
             </div>
             <div className="sb-details">
-                <p>${price.toLocaleString()}</p>
+                <div className="sb-details-top">
+                    <p>${price.toLocaleString()}</p>
+                    {heartIcon}
+                </div>
                 <p style={{ color: "green" }}>Details</p>
             </div>
         </div>

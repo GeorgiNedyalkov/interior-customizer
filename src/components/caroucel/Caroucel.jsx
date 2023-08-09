@@ -51,25 +51,25 @@ const Slide = ({ name }) => {
                 ) {
                     position = "lastSlide";
                 }
+                const slidePopups = s.popups?.map((popup, index) => {
+                    return (
+                        <Popup
+                            key={index}
+                            ancor={popup.ancor}
+                            title={popup.title}
+                            topPosition={popup.topPosition}
+                            leftPosition={popup.leftPosition}
+                        >
+                            {popup.desc}
+                        </Popup>
+                    );
+                });
 
                 return (
                     <figure key={id} className={position}>
                         <Badge name={name} />
 
-                        {s.popups &&
-                            s.popups.map((popup, index) => {
-                                return (
-                                    <Popup
-                                        key={index}
-                                        ancor={popup.ancor}
-                                        title={popup.title}
-                                        topPosition={popup.topPosition}
-                                        leftPosition={popup.leftPosition}
-                                    >
-                                        {popup.desc}
-                                    </Popup>
-                                );
-                            })}
+                        {s.popups && slidePopups}
 
                         {slideImage ? (
                             <img src={slideImage} alt="" />
