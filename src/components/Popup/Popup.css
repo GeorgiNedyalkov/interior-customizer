@@ -1,0 +1,67 @@
+.popup {
+  border-radius: 5px;
+  position: absolute;
+}
+
+.btn-title {
+  background: rgba(252, 252, 250, 0.8);
+  color: rgb(66, 66, 66);
+  padding: 8px 14px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1em;
+  gap: 3px;
+}
+
+.desc {
+  position: absolute;
+  font-family: ABCRepro, Arial;
+  width: 400px;
+  height: auto;
+  background-color: rgba(252, 252, 250, 0.8);
+  color: #333;
+  box-shadow: rgb(24 24 26 / 16%) 0px 4px 16px;
+  margin: 5px 0px;
+  padding: 18px 24px;
+  border-radius: 5px;
+}
+
+.bottom-right {
+  top: 40px;
+  left: 0px;
+}
+
+.bottom-left {
+  top: 40px;
+  left: -136px;
+}
+
+.top-right {
+  top: -110px;
+  left: 0px;
+}
+
+.top-left {
+  top: -65px;
+  left: -136px;
+}
+
+.icon {
+  font-size: 1.5em;
+}
+
+.icon-open {
+  color: green;
+}
+
+.icon-closed {
+  color: rgb(252, 252, 250);
+}
+
+.btn-close {
+  background-color: rgb(93, 140, 70);
+  color: #fff;
+}
