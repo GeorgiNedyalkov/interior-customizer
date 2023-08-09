@@ -1,24 +1,26 @@
 import { useState, useEffect } from "react";
-import { useFeature } from "../../context/featureContext";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useFeature } from "../../context/featureContext";
 import Badge from "../Badge/Badge";
 import Popup from "../Popup/Popup";
 import "./Caroucel.css";
 
 const Caroucel = () => {
-    const { featuresContext } = useFeature();
-
     return (
         <div className="slider">
-            <Slide slides={featuresContext} />;
+            <Slide />;
         </div>
     );
 };
 
-const Slide = ({ slides, name }) => {
+const Slide = ({ name }) => {
+    const { featuresContext } = useFeature();
+    const [slides, setSlides] = useState(featuresContext);
     const [index, setIndex] = useState(0);
     const [slideImage, setSlideImage] = useState("");
     const [slideCaption, setSlideCaption] = useState("");
+
+    console.log(slides);
 
     useEffect(() => {
         const lastIndex = slides.length - 1;
@@ -113,22 +115,7 @@ const Slide = ({ slides, name }) => {
                                 </div>
                             )}
 
-                            <div className="dot-container">
-                                {slides.length > 1 &&
-                                    slides.map((s, slideIndex) => {
-                                        return (
-                                            <div
-                                                key={slideIndex}
-                                                className="dot"
-                                                onClick={() =>
-                                                    setIndex(slideIndex)
-                                                }
-                                            >
-                                                &#8226;
-                                            </div>
-                                        );
-                                    })}
-                            </div>
+                            <Dots slides={slides} setIndex={setIndex} />
                         </figcaption>
                     </figure>
                 );
@@ -138,3 +125,22 @@ const Slide = ({ slides, name }) => {
 };
 
 export default Caroucel;
+
+const Dots = ({ slides, setIndex }) => {
+    return (
+        <div className="dot-container">
+            {slides.length > 1 &&
+                slides.map((s, slideIndex) => {
+                    return (
+                        <div
+                            key={slideIndex}
+                            className="dot"
+                            onClick={() => setIndex(slideIndex)}
+                        >
+                            &#8226;
+                        </div>
+                    );
+                })}
+        </div>
+    );
+};
