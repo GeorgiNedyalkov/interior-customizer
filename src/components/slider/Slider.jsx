@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Badge from "../Badge/Badge";
 import Popup from "../Popup/Popup";
-import { useDesign } from "../../context/context";
+import { useDesign } from "../../context/designContext";
 import "./Slider.css";
 
 const Slider = () => {
-    const [index, setIndex] = useState(0);
     const { contextDesign } = useDesign();
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         const lastIndex = contextDesign.length - 1;
@@ -15,7 +15,8 @@ const Slider = () => {
         if (index < 0) {
             setIndex(lastIndex);
         }
-        if (index >= lastIndex) {
+
+        if (index > lastIndex) {
             setIndex(0);
         }
     }, [index, contextDesign]);
@@ -36,25 +37,26 @@ const Slider = () => {
                     position = "lastSlide";
                 }
 
+                const slidePopups = slide.popups?.map((popup, index) => {
+                    return (
+                        <Popup
+                            key={index}
+                            ancor={popup.ancor}
+                            title={popup.title}
+                            topPosition={popup.topPosition}
+                            leftPosition={popup.leftPosition}
+                        >
+                            {popup.desc}
+                        </Popup>
+                    );
+                });
+
                 return (
                     <figure key={id} className={`${position}`}>
                         <Badge name={name} />
 
                         {/* Popups */}
-                        {slide.popups &&
-                            slide.popups.map((popup, index) => {
-                                return (
-                                    <Popup
-                                        key={index}
-                                        ancor={popup.ancor}
-                                        title={popup.title}
-                                        topPosition={popup.topPosition}
-                                        leftPosition={popup.leftPosition}
-                                    >
-                                        {popup.desc}
-                                    </Popup>
-                                );
-                            })}
+                        {slide.popups && slidePopups}
 
                         {/* Slides */}
                         <img src={image} alt="" />
@@ -78,19 +80,7 @@ const Slider = () => {
                         {/* Caption */}
                         <figcaption className="slider-caption">
                             {caption}
-                            <div className="dot-container">
-                                {contextDesign.map((s, slideIndex) => {
-                                    return (
-                                        <div
-                                            key={slideIndex}
-                                            className="dot"
-                                            onClick={() => setIndex(slideIndex)}
-                                        >
-                                            &#8226;
-                                        </div>
-                                    );
-                                })}
-                            </div>
+                            <Dots setIndex={setIndex} />
                         </figcaption>
                     </figure>
                 );
@@ -100,3 +90,22 @@ const Slider = () => {
 };
 
 export default Slider;
+
+const Dots = ({ setIndex }) => {
+    const { contextDesign } = useDesign();
+    return (
+        <div className="dot-container">
+            {contextDesign.map((s, slideIndex) => {
+                return (
+                    <div
+                        key={slideIndex}
+                        className="dot"
+                        onClick={() => setIndex(slideIndex)}
+                    >
+                        &#8226;
+                    </div>
+                );
+            })}
+        </div>
+    );
+};
