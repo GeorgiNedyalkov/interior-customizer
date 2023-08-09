@@ -16,7 +16,6 @@ const FeatureList = () => {
 
 const PrimaryFeature = ({ icon, name, subfeatures }) => {
     const [showFeature, setShowFeature] = useState(false);
-    console.log(subfeatures);
 
     return (
         <div className="feature-section">
@@ -58,7 +57,7 @@ const SubFeature = ({ name, price, slides }) => {
         <div
             onClick={() => {
                 setIsSelected(!isSelected);
-                selectFeature(slides);
+                selectFeature(slides, isSelected);
             }}
             className={`sub-feature ${isSelected && "selected"}`}
         >

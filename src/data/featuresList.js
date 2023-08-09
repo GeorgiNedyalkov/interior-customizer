@@ -141,7 +141,7 @@ export const outdoorLivingFeatures = [
                         title: "Solar-Powered Lighting",
                         topPosition: "44vh",
                         leftPosition: "49vw",
-                        ancor: "top-right",
+                        ancor: "bottom-right",
                         desc: `Dekton quartz countertops and solar-powered lighting makes food prep easy — day or night.`,
                     },
                 ],
@@ -190,10 +190,6 @@ export const highDesignFeatures = [
                 img: hdWall2,
                 details: `The feature wall has been custom designed to match your home’s material palette and fit its dimensions. 
         It comes pre-installed, ready for you on move-in.`,
-            },
-            {
-                id: 3,
-                img: "",
             },
         ],
     },

@@ -6,21 +6,16 @@ import Popup from "../Popup/Popup";
 import "./Caroucel.css";
 
 const Caroucel = () => {
+    const { featureSlides } = useFeature();
     return (
         <div className="slider">
-            <Slide />;
+            <Slide slides={featureSlides} />;
         </div>
     );
 };
 
-const Slide = ({ name }) => {
-    const { featuresContext } = useFeature();
-    const [slides, setSlides] = useState(featuresContext);
+const Slide = ({ name, slides }) => {
     const [index, setIndex] = useState(0);
-    const [slideImage, setSlideImage] = useState("");
-    const [slideCaption, setSlideCaption] = useState("");
-
-    console.log(slides);
 
     useEffect(() => {
         const lastIndex = slides.length - 1;
@@ -51,6 +46,7 @@ const Slide = ({ name }) => {
                 ) {
                     position = "lastSlide";
                 }
+
                 const slidePopups = s.popups?.map((popup, index) => {
                     return (
                         <Popup
@@ -71,16 +67,14 @@ const Slide = ({ name }) => {
 
                         {s.popups && slidePopups}
 
-                        {slideImage ? (
-                            <img src={slideImage} alt="" />
-                        ) : (
-                            <img src={img} alt="" />
-                        )}
+                        <img src={img} alt="" />
 
                         {index > 0 && (
                             <button
                                 className="prev"
-                                onClick={() => setIndex(index - 1)}
+                                onClick={() => {
+                                    setIndex(index - 1);
+                                }}
                             >
                                 <FiChevronLeft />
                             </button>
@@ -89,31 +83,18 @@ const Slide = ({ name }) => {
                         {index !== s.length - 1 && (
                             <button
                                 className="next"
-                                onClick={() => setIndex(index + 1)}
+                                onClick={() => {
+                                    setIndex(index + 1);
+                                }}
                             >
                                 <FiChevronRight />
                             </button>
                         )}
 
                         <figcaption className="slider-caption">
-                            {slideCaption ? slideCaption : details}
+                            {details && <p>{details}</p>}
 
-                            {options && (
-                                <div className="options">
-                                    {options.map((option, optionIndex) => (
-                                        <button
-                                            key={option}
-                                            className="option-btn"
-                                            onClick={() => {
-                                                setSlideImage(option.img);
-                                                setSlideCaption(option.caption);
-                                            }}
-                                        >
-                                            {option.name}
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
+                            {/* {options && <Options options={options} />} */}
 
                             <Dots slides={slides} setIndex={setIndex} />
                         </figcaption>
@@ -125,6 +106,22 @@ const Slide = ({ name }) => {
 };
 
 export default Caroucel;
+
+const Options = ({ options }) => {
+    return (
+        <div className="options">
+            {options.map((option, optionIndex) => (
+                <button
+                    key={optionIndex}
+                    className="option-btn"
+                    onClick={() => {}}
+                >
+                    {option.name}
+                </button>
+            ))}
+        </div>
+    );
+};
 
 const Dots = ({ slides, setIndex }) => {
     return (

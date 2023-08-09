@@ -2,7 +2,7 @@ import { useEffect, useContext, useReducer, createContext } from "react";
 import { outdoorLivingFeatures } from "../data/featuresList";
 
 const initialState = {
-    featuresContext: outdoorLivingFeatures[0].slides,
+    featureSlides: outdoorLivingFeatures[0].slides,
     isSelected: false,
 };
 
@@ -18,13 +18,13 @@ const featureReducer = (state, action) => {
         case "SELECT_FEATURE":
             return {
                 ...state,
-                featuresContext: action.payload,
+                featureSlides: action.payload,
             };
     }
 };
 
 export function FeaturesContextSource() {
-    const [{ featuresContext, isSelected }, dispatch] = useReducer(
+    const [{ featureSlides, isSelected }, dispatch] = useReducer(
         featureReducer,
         initialState
     );
@@ -32,19 +32,19 @@ export function FeaturesContextSource() {
     useEffect(() => {
         dispatch({
             type: "SET_FEATURE",
-            payload: featuresContext,
+            payload: featureSlides,
         });
-    }, [featuresContext]);
+    }, [featureSlides]);
 
-    const selectFeature = (feature) => {
+    const selectFeature = (feature, isSelected) => {
         dispatch({
             type: "SELECT_FEATURE",
             payload: feature,
-            isSelected: feature.isSelected,
+            isSelected: isSelected,
         });
     };
 
-    return { featuresContext, isSelected, selectFeature };
+    return { featureSlides, isSelected, selectFeature };
 }
 
 export function FeatureProvider({ children }) {
