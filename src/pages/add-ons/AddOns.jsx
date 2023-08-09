@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import AddOnList from "../../components/AddOnList/AddOnList";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -17,7 +18,9 @@ const AddOns = () => {
                             Do you need parking or storage?
                         </h1>
                         <AddOnList />
-                        <Button>See available homes</Button>
+                        <Link to="/available-homes">
+                            <Button>See available homes</Button>
+                        </Link>
                     </Sidebar>
                 </div>
             </div>
